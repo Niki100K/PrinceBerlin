@@ -1,0 +1,52 @@
+.custom-calendar {
+    font-family: 'Arial', sans-serif;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    overflow: hidden;
+    width: 300px;
+    margin: 20px auto;
+  }
+  
+  .header {
+    background-color: #3498db;
+    color: #fff;
+    padding: 10px;
+    text-align: center;
+  }
+  
+  .days {
+    display: flex;
+    justify-content: space-around;
+    background-color: #eee;
+    padding: 10px;
+  }
+  
+  .day {
+    flex: 1;
+    text-align: center;
+  }
+  
+  .dates {
+    display: grid;
+    grid-template-columns: repeat(7, 1fr);
+    gap: 2px;
+  }
+  
+  .date {
+    text-align: center;
+    padding: 10px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .date:hover {
+    background-color: #f0f0f0;
+  }
+  
+  .selected {
+    background-color: #3498db;
+    color: #fff;
+  }
+  
+  /* Add more styling based on your needs */
+  

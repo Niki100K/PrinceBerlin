@@ -1,0 +1,234 @@
+.NavBar {
+    position: absolute;
+    width: 100%;
+    z-index: 10;
+}
+.NavBar.fixed {
+    position: fixed;
+}
+.NavBar nav {
+    width: 100%;
+    height: 60px;
+    background: transparent;
+    top: 0;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    transition: 0.4s;
+}
+.NavBar nav .navigate {
+    display: flex;
+    justify-content: center;
+    align-items: center;    
+}
+.NavBar nav .navigate.close {
+    display: none;
+}
+.NavBar nav .navigate p {
+    margin: 0 8px;
+    cursor: pointer;
+    color: var(--Dark1);
+}
+.NavBar nav .navigate p a {
+    text-decoration: none;
+    color: var(--Dark1);
+}
+.NavBar nav .navigate p.color a {
+    color: var(--Light1);
+}
+.NavBar nav .navigate p:hover {
+    color: var(--Light1);
+}
+.NavBar nav .logo {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.NavBar nav .logo img {
+    max-width: 50px;
+    width: 100%;
+}
+.NavBar nav .logo h2 {
+    font-family: var(--Font4);
+}
+.NavBar nav ul {
+    display: flex;
+}
+.NavBar nav ul li {
+    display: flex;
+    margin: 0 4px;
+}
+.NavBar nav ul li a {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.NavBar nav ul li a span {
+    font-size: 20px;
+    color: var(--Dark1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.NavBar nav ul li:hover a span {
+    color: var(--Light1);
+}
+.NavBar nav ul li .details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.NavBar nav ul li .details ol {
+    width: 100%;
+}
+.NavBar nav ul li .details ol li {
+    padding: 4px 8px;
+}
+.NavBar nav ul li .details ol li a {
+    justify-content: flex-end;
+    color: var(--Middle1);
+    font-family: var(--Font2);
+}
+.NavBar .arrow.rotate {
+    transform: rotate(180deg);
+}
+
+.NavBar .navLine {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    background: var(--White1);
+    box-shadow: 4px 4px 8px rgba(0,0,0,0.3);
+    z-index: -1;
+    transition: 1s;
+}
+.NavBar .navLine .fixer {
+    width: 100%;
+    height: 60px;
+}
+.NavBar .navLine :where(.buy, .sell) {
+    width: 60%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 0;
+    overflow: hidden;
+}
+.NavBar .navLine .buy.height {
+    height: 140px;
+    transition: .6s;
+}
+.NavBar .navLine .sell.height {
+    height: 100px;
+    transition: .6s;
+}
+.NavBar .navLine ol {
+    padding: 16px 0;
+    overflow: hidden;
+}
+.NavBar .navLine ol li {
+    margin: 8px 0;
+}
+.NavBar .navLine ol li a {
+    text-decoration: none;
+    color: var(--Middle1);
+}
+.NavBar .navLine ol li:hover a {
+    color: var(--Light1);
+}
+.NavBar #icon {
+    display: none;
+    font-size: 24px;
+    color: var(--Middle1);
+}
+.NavBar .closeCon {
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 0 8px;
+    background: var(--White1);
+}
+.NavBar .mobileOpenNav,
+.NavBar .box {
+    width: 50px;
+    height: 40px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-direction: column;
+}
+.NavBar .mobileOpenNav {
+    display: none;
+}
+.NavBar .mobileOpenNav span,
+.NavBar .box span {
+    width: 80%;
+    height: 6px;
+    background: var(--Dark1);
+    border-radius: 6px;
+}
+.NavBar .box span:nth-child(1) {
+    transform: translateY(180%) rotate(45deg);
+}
+.NavBar .box span:nth-child(2) {
+    opacity: 0;
+}
+.NavBar .box span:nth-child(3) {
+    transform: translateY(-200%) rotate(-45deg);
+}
+
+@media (max-width: 880px) {
+    .NavBar .mobileOpenNav {
+        display: flex;
+    }
+    .NavBar nav {
+        justify-content: space-between;
+    }
+    .NavBar nav ul {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(255, 255, 255, 0.85);
+        display: none;
+        justify-content: flex-start;
+        align-items: center;
+        flex-direction: column;
+        box-shadow: 2px 4px 8px rgba(0,0,0,0.3);
+        padding-bottom: 16px;
+    }
+    .NavBar nav ul.show {
+        display: flex;
+        animation: showUl .2s ease-in-out both;
+    }
+    .NavBar nav ul li {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        margin: 8px 0;
+    }
+    .NavBar nav ul li a {
+        width: 100%;
+        padding: 0 16px;
+        justify-content: space-between;
+    }
+    .NavBar #icon {
+        display: flex;
+    }
+}
+@keyframes showUl {
+    0% {
+        left: 100%;
+    }
+    100% {
+        left: 0;
+    }
+}

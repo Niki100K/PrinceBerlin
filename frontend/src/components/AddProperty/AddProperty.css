@@ -1,0 +1,972 @@
+.AddProperty {
+    position: absolute;
+    top: 160px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.AddProperty button {
+    cursor: pointer;
+}
+.AddProperty button:hover {
+    background: var(--Light1);
+    color: var(--White1);
+    border: none;
+    border-radius: 4px;
+}
+.AddProperty .con {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.AddProperty .con .navBar {
+    position: sticky;
+    top: 0;
+    max-width: 240px;
+    width: 100%;
+    padding-top: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .con .navBar ul {
+    width: 80%;
+}
+.AddProperty .con .navBar ul li {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 32px;
+    cursor: pointer;
+}
+.AddProperty .con .navBar ul li span {
+    color: var(--Middle1);
+    font-family: var(--Font2);
+}
+.AddProperty .con .navBar ul li span.bolt {
+    font-weight: bold;
+}
+.AddProperty .con .navBar ul li #icon {
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: red;
+}
+.AddProperty .con .navBar ul li #correct {
+    position: absolute;
+    left: 0;
+    font-size: 24px;
+    color: green;
+}
+.AddProperty .con .info {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AddProperty .con .info .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 32px;
+}
+.AddProperty .con .info .header h2 {
+    font-family: var(--Font3);
+    letter-spacing: 1px;
+    font-size: 24px;
+}
+.AddProperty .con .info .header p {
+    width: 80%;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+    margin: 8px 0 0;
+}
+.AddProperty .con .info .header p #icon {
+    margin: 0 4px;
+    color: var(--Light1);
+    font-size: 20px;
+}
+.AddProperty .con .info .address {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AddProperty .con .info .address .location {
+    margin-top: 32px;
+}
+.AddProperty .con .info .address :where(.street, .location) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.AddProperty .con .info .address .input {
+    position: relative;
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .con .info .address .input:nth-child(2) {
+    width: 25%;
+}
+.AddProperty .con .info .location .input {
+    position: relative;
+    width: 25%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .con .info .location .input:nth-child(2) {
+    width: 60%;
+}
+.AddProperty .con .info .address .input input {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 4px 4px;
+    outline: none;
+    border: 1px solid var(--Dark1);
+    color: var(--Dark1);
+    font-family: var(--Font4);
+    border-radius: 4px;
+}
+.AddProperty .con .info .address .input label {
+    position: absolute;
+    left: 4px;
+    font-size: 20px;
+    pointer-events: none;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.AddProperty .con .info .address .input input:focus {
+    border: 1px solid var(--Light1);
+}
+.AddProperty .con .info .input input:focus + label,
+.AddProperty .con .info .input input:not(:placeholder-shown) + label {
+    transform: translateY(-90%) translateX(-5%) scale(.8);
+    background: #ffff;
+}
+.AddProperty .con .info .address .input p {
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    font-size: 14px;
+    font-family: var(--Font3);
+    color: red;
+}
+.AddProperty .con .info .keyData {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+}
+.AddProperty .con .info .keyData .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.AddProperty .con .info .keyData .inputs .input {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.AddProperty .con .info .keyData .inputs .input:nth-child(1) input {
+    text-align: center;
+}
+.AddProperty .con .info .keyData .inputs .input input {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 4px 4px;
+    outline: none;
+    border: 1px solid var(--Dark1);
+    color: var(--Dark1);
+    font-family: var(--Font4);
+    border-radius: 4px;
+}
+.AddProperty .con .info .keyData .inputs .input label {
+    position: absolute;
+    left: 4px;
+    font-size: 20px;
+    pointer-events: none;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.AddProperty .con .info .keyData .inputs .input:nth-child(1) label {
+    transform: translateY(-120%);
+    font-size: 18px;
+    background: transparent !important;
+}
+.AddProperty .con .info .keyData .inputs .input:not(:nth-child(1)) input:focus {
+    border: 1px solid var(--Light1);
+}
+.AddProperty .con .info .keyData .inputs .input span {
+    position: absolute;
+    right: 4px;
+    font-size: 22px;
+    color: var(--Dark1);
+    font-family: var(--Font4);
+}
+.AddProperty .con .info .keyData .inputs .input p {
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    font-size: 14px;
+    font-family: var(--Font3);
+    color: red;
+}
+.AddProperty .con .info .keyData .inputs .input button {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .con .info .keyData .inputs .input button:nth-child(4) {
+    left: unset;
+    right: 0;
+}
+
+.AddProperty .con .info .details {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+}
+.AddProperty .con .info .details .facilities {
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 32px;
+    flex-wrap: wrap;
+}
+.AddProperty .con .info .details .facilities button {
+    font-size: 24px;
+    padding: 4px 8px;
+    border-radius: 8px;
+    border: 1px solid var(--Middle1);
+    color: var(--Dark1);
+    font-family: var(--Font2);
+    cursor: pointer;
+}
+.AddProperty .con .info .details .facilities button:hover,
+.AddProperty .con .info .details .facilities button.correct  {
+    background: var(--Light1);
+    color: var(--White1);
+}
+.AddProperty .con .info .details .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.AddProperty .con .info .details .inputs .input {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.AddProperty .con .info .details .inputs .input input {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 4px 4px;
+    outline: none;
+    border: 1px solid var(--Dark1);
+    color: var(--Dark1);
+    font-family: var(--Font4);
+    border-radius: 4px;
+}
+.AddProperty .con .info .details .inputs .input:where(:nth-child(2), :nth-child(5)) input:focus {
+    border: 1px solid var(--Light1);
+}
+.AddProperty .con .info .details .inputs .input label {
+    position: absolute;
+    left: 4px;
+    font-size: 20px;
+    pointer-events: none;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.AddProperty .con .info .details .inputs .input:where(:nth-child(3), :nth-child(4)) input {
+    text-align: center;
+}
+.AddProperty .con .info .details .inputs .input:not(:nth-child(2), :nth-child(5)) label {
+    transform: translateY(-120%);
+    font-size: 18px;
+    background: transparent !important;
+}
+.AddProperty .con .info .details .inputs .input:where(:nth-child(3), :nth-child(4)) button {
+    position: absolute;
+    left: 0;
+    height: 100%;
+    width: 20%;
+    font-size: 32px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .con .info .details .inputs .input:where(:nth-child(3), :nth-child(4)) button:nth-child(4) {
+    left: unset;
+    right: 0;
+}
+.AddProperty .con .info .details .inputs .input p {
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    font-size: 14px;
+    font-family: var(--Font3);
+    color: red;
+}
+.AddProperty .con .info .details .inputs .input select {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    font-size: 16px;
+    outline: none;
+    border-radius: 4px;
+    font-family: var(--Font2);
+}
+.AddProperty .con .info .details .inputs .input select option {
+    font-family: var(--Font4);
+}
+.AddProperty .con .info .description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+}
+.AddProperty .con .info .description .input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.AddProperty .con .info .description .input input {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 4px 4px;
+    outline: none;
+    border: 1px solid var(--Dark1);
+    color: var(--Dark1);
+    font-family: var(--Font4);
+    border-radius: 4px;
+}
+.AddProperty .con .info .description .input:nth-child(3) P {
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    font-size: 14px;
+    font-family: var(--Font3);
+    color: red;
+    right: unset;
+}
+.AddProperty .con .info .description .input:nth-child(3) label {
+    position: absolute;
+    left: 4px;
+    font-size: 20px;
+    pointer-events: none;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.AddProperty .con .info .description .input:nth-child(3) input:focus + label,
+.AddProperty .con .info .description .input:nth-child(3)input:not(:placeholder-shown) + label {
+    transform: translateY(-90%) translateX(-5%) scale(.8);
+    background: #ffff;
+}
+.AddProperty .con .info .description .input:not(:nth-child(3)) label {
+    position: absolute;
+    bottom: 100%;
+    left: 4px;
+    font-family: var(--Font2);
+}
+.AddProperty .con .info .description .input textarea {
+    width: 100%;
+    min-width: 100%;
+    min-height: 80px;
+    max-height: 320px;
+    font-size: 20px;
+    padding: 4px 8px 16px;
+    border: 1px solid var(--Dark1);
+    color: var(--Dark1);
+    font-family: var(--Font4);
+    border-radius: 4px;
+    outline: none;
+}
+.AddProperty .con .info .description .input:nth-child(4) textarea {
+    max-height: 160px;
+}
+.AddProperty .con .info .description .input p {
+    position: absolute;
+    top: 100%;
+    right: 0;
+    font-size: 14px;
+    font-family: var(--Font3);
+}
+.AddProperty .con .info .images .input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+    border: 1px solid var(--Dark1);
+    border-radius: 16px;
+}
+.AddProperty .con .info .images .input img {
+    width: 100%;
+}
+.AddProperty .con .info .images .input:hover img {
+    transform: scale(.9);
+    cursor: pointer;
+}
+.AddProperty .con .info .images .input input {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+    opacity: 0;
+}
+.AddProperty .con .info .images .userImages-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AddProperty .con .info .images .userImages-con .img {
+    position: relative;
+    width: 100%;
+    margin-top: 16px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 8px;
+    overflow: hidden;
+} 
+.AddProperty .con .info .images .userImages-con .img img {
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+    width: 100%;
+}
+.AddProperty .con .info .images .userImages-con .img button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    font-size: 24px;
+    border: 1px solid var(--Dark1);
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    border-radius: 4px;
+}
+.AddProperty .con .info .contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 48px;
+}
+.AddProperty .con .info .contact .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.AddProperty .con .info .contact .inputs .input {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 32px;
+}
+.AddProperty .con .info .contact .inputs .input input {
+    width: 100%;
+    font-size: 20px;
+    padding: 8px 4px 4px;
+    outline: none;
+    border: 1px solid var(--Dark1);
+    color: var(--Dark1);
+    font-family: var(--Font4);
+    border-radius: 4px;
+}
+.AddProperty .con .info .contact .inputs .input label {
+    position: absolute;
+    left: 4px;
+    font-size: 20px;
+    pointer-events: none;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.AddProperty .con .info .contact .inputs .input p {
+    position: absolute;
+    top: 100%;
+    left: 4px;
+    font-size: 14px;
+    font-family: var(--Font3);
+    color: red;
+}
+.AddProperty .con .info .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 32px;
+}
+.AddProperty .con .info .btn button {
+    font-size: 22px;
+    padding: 4px 20px;
+    border-radius: 8px;
+    border: 1px solid var(--Dark1);
+    background: var(--Dark1);
+    color: var(--White1);
+    cursor: pointer;
+}
+.AddProperty .con .info .btn button:nth-child(2) {
+    background: var(--Light1);
+}
+.AddProperty .con .info .btn button:hover {
+    opacity: .9;
+}
+.AddProperty .con .info .mobile-tips {
+    width: 100%;
+    display: none;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.AddProperty .con .info .mobile-tips h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: var(--Font4);
+    margin-bottom: 16px;
+}
+.AddProperty .con .info .mobile-tips h2 #tip {
+    font-size: 32px;
+    margin: 0 8px;
+    color: var(--Light1);
+}
+.AddProperty .con .info .mobile-tips .input {
+    position: relative;
+    width: 40%;
+    margin: 32px 0 48px;
+}
+.AddProperty .con .info .mobile-tips .input input {
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--Middle1);
+    padding: 8px 4px 4px;
+}
+.AddProperty .con .info .mobile-tips .input label {
+    position: absolute;
+    left: 4px;
+    font-size: 18px;
+    font-family: var(--Font2);
+}
+.AddProperty .con .info .mobile-tips p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--Middle1);
+    font-family: var(--Font4);
+    margin-bottom: 8px;
+}
+
+.AddProperty .con .tips {
+    position: sticky;
+    top: 0;
+    max-width: 300px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-top: 48px;
+}
+.AddProperty .con .tips .manage {
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    border-radius: 8px;
+    padding: 16px 8px;
+}
+.AddProperty .con .tips .manage h2 {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 40px;
+    font-family: var(--Font4);
+    margin-bottom: 16px;
+}
+.AddProperty .con .tips .manage h2 #tip {
+    font-size: 32px;
+    margin: 0 8px;
+    color: var(--Light1);
+}
+.AddProperty .con .tips .manage p {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 14px;
+    color: var(--Middle1);
+    font-family: var(--Font4);
+    margin-bottom: 8px;
+}
+.AddProperty .con .tips .manage strong {
+    position: absolute;
+    left: 4px;
+    top: 100%;
+    font-size: 12px;
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.AddProperty .con .tips .manage .input {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 32px 0 48px;
+}
+.AddProperty .con .tips .manage .input input {
+    width: 100%;
+    font-size: 20px;
+    outline: none;
+    border-radius: 4px;
+    border: 1px solid var(--Middle1);
+    font-family: var(--Font4);
+    padding: 8px 4px 4px;
+}
+.AddProperty .con .tips .manage .input label {
+    position: absolute;
+    left: 8px;
+    bottom: 100%;
+    font-size: 12px;
+    font-family: var(--Font2);
+}
+.AddProperty .con .tips .manage span {
+    color: red;
+    font-family: var(--Font4);
+}
+.AddProperty .con .tips .manage .input #lock {
+    position: absolute;
+    right: 8px;
+    font-size: 24px;
+    color: var(--Middle1);
+}
+@media (max-width: 1100px) {
+    .AddProperty .con {
+        justify-content: flex-start;
+    }
+    .AddProperty .con .tips {
+        display: none;
+    }
+    .AddProperty .con .info .mobile-tips {
+        display: flex;
+    }
+}
+@media (Max-width: 780px) {
+    .AddProperty .con {
+        justify-content: center;
+        padding: 0 8px;
+    }
+    .AddProperty .con .navBar {
+        display: none;
+    }
+}
+@media (MAx-width: 500px) {
+    .AddProperty .con .info .details .facilities {
+        width: 100%;
+    }
+    .AddProperty .con .info .header h2 {
+        font-size: 20px;
+    }
+    .AddProperty .con .info .mobile-tips h2 {
+        font-size: 24px;
+    }
+    .AddProperty .con .info .address .input {
+        width: 65%;
+    }
+    .AddProperty .con .info .address .input:nth-child(2) {
+        width: 30%;
+    }
+    .AddProperty .con .info .location .input {
+        width: 30%;
+    }
+    .AddProperty .con .info .location .input:nth-child(2) {
+        width: 65%;
+    }
+    .AddProperty .con .info .keyData .inputs .input,
+    .AddProperty .con .info .details .inputs .input,
+    .AddProperty .con .info .contact .inputs .input {
+        width: 48%;
+    }
+}
+@media (MAx-width: 420px) {
+
+    .AddProperty .con .info .header p {
+        width: 100%;
+    }
+
+    .AddProperty .con .info .address .input input,
+    .AddProperty .con .info .keyData .inputs .input input,
+    .AddProperty .con .info .details .inputs .input input,
+    .AddProperty .con .info .description .input input,
+    .AddProperty .con .info .contact .inputs .input input {
+        font-size: 16px;
+    }
+    .AddProperty .con .info .address .input label,
+    .AddProperty .con .info .keyData .inputs .input label,
+    .AddProperty .con .info .keyData .inputs .input:nth-child(1) label,
+    .AddProperty .con .info .details .inputs .input label,
+    .AddProperty .con .info .details .inputs .input:not(:nth-child(2), :nth-child(5)) label,
+    .AddProperty .con .info .description .input:nth-child(3) label,
+    .AddProperty .con .info .contact .inputs .input label {
+        font-size: 16px;
+    }
+    .AddProperty .con .info .address .input p,
+    .AddProperty .con .info .keyData .inputs .input p,
+    .AddProperty .con .info .details .inputs .input p,
+    .AddProperty .con .info .description .input p {
+        font-size: 12px;
+    }
+    .AddProperty .con .info .keyData .inputs .input span {
+        font-size: 16px;
+    }
+    .AddProperty .con .info .details .facilities button,
+    .AddProperty .con .info .btn button {
+        font-size: 16px;
+    }
+    .AddProperty .con .info .details .inputs .input select {
+        font-size: 14px;
+    }
+}   
+@media (max-width: 360px) {
+    .AddProperty {
+        overflow: hidden;
+    }
+
+    .AddProperty .con .info .details .facilities button,
+    .AddProperty .con .info .btn button {
+        width: 100%;
+        margin-bottom: 8px;
+    }
+    .AddProperty .con .info .btn a {
+        width: 100%;
+    }
+
+    .AddProperty .con .info .keyData .inputs .input,
+    .AddProperty .con .info .details .inputs .input,
+    .AddProperty .con .info .contact .inputs .input {
+        width: 100%;
+    }
+    .AddProperty .con .info .mobile-tips .input {
+        width: 100%;
+    }
+}
+
+
+
+
+.AddProperty .loading {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.AddProperty .loading img {
+    max-width: 540px;
+    width: 100%;
+}
+.AddProperty .loading .line {
+    position: relative;
+    width: 100%;
+    height: 24px;
+    border-radius: 4px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .loading .line::before {
+    position: absolute;
+    content: "";
+    width: 98%;
+    height: 100%;
+    z-index: -2;
+    animation: loading-animation 1s linear infinite alternate;
+}
+@keyframes loading-animation {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+.AddProperty .loading .line::after {
+    transition: 1s;
+    width: 0%;
+}
+.AddProperty .loading .line.half::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 50%;
+    height: 100%;
+    z-index: -1;
+    background: var(--Light1);
+}
+.AddProperty .loading .line.total::after {
+    position: absolute;
+    left: 0;
+    content: "";
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    background: var(--Light1);
+}
+.AddProperty .loading .line .circles-con {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.AddProperty .loading .line .circle {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--Dark1);
+    color: var(--White1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 32px;
+}
+.AddProperty .newProperty {
+    max-width: 600px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 0 8px;
+}
+.AddProperty .newProperty h2 {
+    font-family: var(--Font2);
+    color: var(--Dark1);
+    text-align: center;
+}
+.AddProperty .newProperty .infoProperty {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 32px 0 16px;
+}
+.AddProperty .newProperty .infoProperty .input {
+    position: relative;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.AddProperty .newProperty .infoProperty .input input {
+    width: 100%;
+    font-size: 24px;
+    border: 1px solid var(--Dark1);
+    background: var(--Light1);
+    color: var(--White1);
+    outline: none;
+    border-radius: 8px;
+    text-align: center;
+}
+.AddProperty .newProperty .infoProperty .input label {
+    position: absolute;
+    left: 4px;
+    bottom: 100%;
+    color: var(--Dark1);
+    font-family: var(--Font4);
+}
+.AddProperty .newProperty img {
+    max-width: 540px;
+    width: 100%;
+}
+.AddProperty .newProperty .navigate {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 16px 0;
+}
+.AddProperty .newProperty .navigate button {
+    width: 40%;
+    font-size: 20px;
+    border-radius: 8px;
+    padding: 2px;
+    border: 1px solid var(--Dark1);
+    background: var(--Middle1);
+    color: var(--White1);
+}
+.AddProperty .newProperty .navigate button:nth-child(1) {
+    background: var(--Light1);
+}
+.AddProperty .newProperty .navigate button:nth-child(1):hover {
+    opacity: .9;
+}
+.AddProperty .newProperty .navigate button:nth-child(2):hover {
+    background: var(--Dark1);
+}
+@media (max-width: 380px) {
+    .AddProperty .newProperty .infoProperty,
+    .AddProperty .newProperty .navigate {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .AddProperty .newProperty .infoProperty .input,
+    .AddProperty .newProperty .navigate button {
+        width: 100%;
+        margin-top: 18px;
+    }
+}

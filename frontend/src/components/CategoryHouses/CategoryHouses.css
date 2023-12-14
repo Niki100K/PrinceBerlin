@@ -1,0 +1,396 @@
+.CategoryHouses {
+    position: absolute;
+    top: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.CategoryHouses .settings {
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    width: 100%;
+    background: var(--White1);
+    display: flex;
+    justify-content: flex-start;
+    padding: 24px;
+    align-items: center;
+    z-index: 2;
+}
+.CategoryHouses .settings .option.filter {
+    display: none;
+}
+.CategoryHouses .settings .option {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 0 12px;
+}
+.CategoryHouses .settings p {
+    font-size: 28px;
+    border: 1px solid var(--Dark1);
+    padding: 2px 20px;
+    border-radius: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.CategoryHouses .settings .option p .icon {
+    margin-left: 8px;
+    color: var(--Middle1);
+}
+.CategoryHouses .settings .option p .icon.rotate {
+    transform: rotate(180deg);
+    color: var(--Light1);
+}
+.CategoryHouses .settings .option .manage {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--White1);
+    border-radius: 8px;
+    border: 1px solid var(--Dark1);
+    padding: 20px;
+    margin-top: 8px;
+    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.3);
+}
+.CategoryHouses .settings .option .manage input {
+    font-size: 24px;
+    margin-bottom: 24px;
+    padding: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Dark1);
+    outline: none;
+}
+.CategoryHouses .settings .option .manage input:focus,
+.CategoryHouses .settings .option .manage input:not(:placeholder-shown) {
+    border: 1px solid var(--Light1);
+}
+.CategoryHouses .settings .option .manage .btn {
+    width: 100%;
+}
+.CategoryHouses .settings .option .manage .beds-btn {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.CategoryHouses .settings .option .manage button {
+    font-size: 20px;
+    padding: 2px 20px;
+    margin: 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Dark1);
+    cursor: pointer;
+}
+.CategoryHouses .settings .option .manage button:hover,
+.CategoryHouses .settings .option .manage button.active {
+    background: var(--Light1);
+    color: var(--White1);
+}
+
+
+
+
+
+
+.CategoryHouses .container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 24px 8px;
+}
+.CategoryHouses .container .card-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-bottom: 10px;
+    border: 2px solid transparent;
+    padding-bottom: 8px;
+    border-radius: 12px 12px 0 0;
+    overflow: hidden;
+    text-decoration: none;
+}
+.CategoryHouses .container .card-con:active {
+    border: 2px solid var(--Light1);
+}
+.CategoryHouses .container .card-con .card {
+    position: relative;
+    width: 100%;
+}
+.CategoryHouses .container .card-con .card img {
+    width: 100%;
+    height: 100%;
+}
+.CategoryHouses .container .card-con .info {
+    position: relative;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 12px 8px;
+}
+.CategoryHouses .container .card-con .info .price {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    color: var(--Dark1);
+}
+.CategoryHouses .container .card-con .info .price strong {
+    display: flex;
+    color: green;
+    animation: show-discount 1s linear both;
+}
+@keyframes show-discount {
+    0% {transform: translateY(-50%); opacity: 0;}
+}
+.CategoryHouses .container .card-con .info .about {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+}
+.CategoryHouses .container .card-con .info .about p {
+    margin-right: 18px;
+    color: var(--Dark1);
+}
+.CategoryHouses .container .card-con .info .about p strong {
+    margin-right: 8px;
+    color: var(--Light1);
+}
+.CategoryHouses .container .card-con .info .place {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.CategoryHouses .container .card-con .info .place p {
+    width: 80%;
+    color: var(--Middle1);
+}
+
+.CategoryHouses .container .propery-btn-con {
+    width: 100%;
+    padding: 48px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.CategoryHouses .container .propery-btn-con button {
+    font-size: 24px;
+    text-transform: capitalize;
+    padding: 8px 24px;
+    border-radius: 8px;
+    background: var(--Light1);
+    color: var(--White1);
+    border: 2px solid transparent;
+    transition: 0.4s;
+    cursor: pointer;
+}
+.CategoryHouses .container .propery-btn-con button:hover {
+    opacity: .7;
+}
+
+.CategoryHouses .search-img {
+    max-width: 800px;
+}
+.CategoryHouses .search-img img {
+    width: 100%;
+}
+
+
+
+@media (max-width: 1100px) {
+    .CategoryHouses .settings .option p {
+        font-size: 20px;
+    }
+}
+@media (Max-width: 880px) {
+    .CategoryHouses .settings {
+        justify-content: flex-end;
+        padding: 8px;
+    }
+    .CategoryHouses .settings .option {
+        display: none;
+    }
+    .CategoryHouses .settings .option.filter {
+        display: flex;
+    }
+}
+
+@media (Max-width: 380px) {
+    .CategoryHouses {
+        top: 60px;
+    }
+    .CategoryHouses .container .propery-btn-con {
+        padding: 48px 8px;
+    }
+    .CategoryHouses .container .propery-btn-con button {
+        font-size: 20px;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.SettingsHome {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 0%;
+    overflow: auto;
+    background: var(--White1);
+    z-index: 1002;
+}
+.SettingsHome.show {
+    height: 100%;
+    transition: 0.4s;
+}
+.SettingsHome .close-btn {
+    position: sticky;
+    top: 0;
+    background: var(--White1);
+    width: 100%;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: flex-start;
+    padding-left: 12px;
+    align-items: center;
+}
+.SettingsHome .close-btn .text {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.SettingsHome .close-btn .icon {
+    font-size: 32px;
+    transform: rotate(90deg);
+}
+.SettingsHome .close-btn p {
+    font-size: 24px;
+    margin-left: 8px;
+}
+.SettingsHome .box {
+    width: 100%;
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SettingsHome .box .header {
+    width: 100%;
+    padding-left: 16px;
+    font-size: 28px;
+    margin-bottom: 8px;
+}
+.SettingsHome .box .split {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SettingsHome .box .split .input {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 4px;
+}
+.SettingsHome .box .split .input input {
+    width: 100%;
+    font-size: 24px;
+    padding: 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid var(--Dark1);
+}
+.SettingsHome .box .split .input input:focus,
+.SettingsHome .box .split .input input:not(:placeholder-shown) {
+    border: 1px solid var(--Light1);
+}
+.SettingsHome .box .split .input button {
+    width: 100%;
+    padding: 8px;
+    outline: none;
+    border-radius: 8px;
+    border: 1px solid var(--Dark1);
+    margin-top: 4px;
+    font-size: 20px;
+}
+.SettingsHome .box .split .input button:hover,
+.SettingsHome .box .split .input button.active {
+    background: var(--Light1);
+    color: var(--White1);
+}
+.SettingsHome .box .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.SettingsHome .box .btn button {
+    width: 50%;
+    margin: 4px;
+    font-size: 20px;
+    padding: 4px;
+    background: var(--Dark1);
+    border: none;
+    color: var(--White1);
+}
+.SettingsHome .box .btn button:hover,
+.SettingsHome .box .btn button.active {
+    background: var(--Light1);
+    color: var(--White1);
+}
+
+
+@media (max-width: 680px) {
+    .SettingsHome .box .header {
+        font-size: 16px;
+    }
+}
+@media (max-width: 380px) {
+    .SettingsHome .box .split .input input {
+        font-size: 18px;
+        padding: 2px 4px;
+    }
+    .SettingsHome .box .btn button {
+        font-size: 18px;
+    }
+    .SettingsHome .box .split .input button {
+        font-size: 18px;
+    }
+}

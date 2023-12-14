@@ -1,0 +1,311 @@
+.Creers {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Creers .main-img {
+    width: 100%;
+    max-height: 600px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    overflow: hidden;
+    margin-bottom: 40px;
+}
+.Creers .main-img img {
+    width: 100%;
+}
+
+
+.Creers .success {
+    width: 1200px;
+    padding: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Creers .success h2 {
+    color: var(--Dark1);
+    font-size: 40px;
+    width: 100%;
+    margin-bottom: 24px;
+}
+.Creers .success h2 strong {
+    position: relative;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.Creers .success h2 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.Creers .success h2 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.Creers .success h2 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+}
+.Creers .success p {
+    font-size: 24px;
+    color: var(--Middle1);
+}
+
+
+.Creers .discover {
+    max-width: 1200px;
+    width: 100%;
+    padding: 24px 8px;
+    margin: 40px 0;
+}
+.Creers .discover .con {
+    width: 100%;
+    margin-bottom: 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Creers .discover .con:nth-child(even) {
+    flex-direction: row-reverse;
+}
+.Creers .discover .con .info {
+    width: 50%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+}
+.Creers .discover .con .info h2 {
+    color: var(--Middle1);
+    text-shadow: 2px 4px 4px rgba(0, 0, 0, 0.2);
+    font-size: 32px;
+    padding-left: 8px;
+    text-transform: capitalize;
+}
+.Creers .discover .con .info p {
+    font-size: 24px;
+    color: var(--Middle1);
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    opacity: 0.8;
+    margin-bottom: 24px;
+}
+.Creers .discover .con .info a {
+    font-size: 18px;
+    color: var(--Dark1);
+    text-decoration: none;
+    border: 2px solid transparent;
+    padding: 4px 20px;
+    border-radius: 4px;
+}
+.Creers .discover .con .info a:hover {
+    color: var(--Light1);
+    border: 2px solid var(--Light1);
+}
+.Creers .discover .con .img {
+    margin-left: 12px;
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.Creers .discover .con:nth-child(even) .img {
+    margin-left: unset;
+    margin-right: 12px;
+}
+.Creers .discover .con .img img {
+    width: 100%;
+    transform: scale(1.2);
+}
+.Creers .discover .con .img img.show {
+    transform: scale(1);
+    transition: 1s;
+}
+
+
+.Creers .contact {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: var(--Dark1);
+    z-index: 2;
+}
+.Creers .contact .con {
+    max-width: 1200px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    z-index: 1;
+}
+.Creers .contact .con img {
+    width: 400px;
+}
+.Creers .contact .con .info {
+    padding: 24px;
+}
+.Creers .contact .con .info h2 {
+    color: var(--White1);
+    font-size: 38px;
+    margin-bottom: 12px;
+    width: 100%;
+}
+
+.Creers .contact .con .info h2 strong {
+    position: relative;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.Creers .contact .con .info h2 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.Creers .contact .con .info h2 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.Creers .contact .con .info h2 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+}
+
+
+.Creers .contact .con .info p {
+    font-size: 24px;
+    color: var(--White1);
+    opacity: 0.8;
+}
+.Creers .contact .con .info button {
+    font-size: 20px;
+    padding: 4px 20px;
+    margin: 24px 8px;
+    border-radius: 8px;
+    cursor: pointer;
+    background: var(--Light1);
+    color: var(--White1);
+    border: none;
+    opacity: 0.9;
+}
+.Creers .contact .con .info button:hover {
+    opacity: 1;
+}
+
+
+
+.Creers .skeleton-main-img {
+    width: 100%;
+    height: 200px;
+    opacity: .7;
+    animation: skeleton-main-img 1s linear infinite alternate;
+}
+@keyframes skeleton-main-img {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}
+
+
+@media (Max-width: 680px) {
+
+    .Creers .main-img img {
+        width: 150%;
+    }
+
+    .Creers .contact .con {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Creers .contact .con img {
+        max-width: 400px;
+        width: 100%;
+    }
+
+    .Creers .discover {
+        padding: 24px 0;
+    }
+    .Creers .discover .con {
+        justify-content: center;
+        align-items: center;
+    }
+    .Creers .discover .con:nth-child(odd) {
+        flex-direction: column-reverse;
+    }
+    .Creers .discover .con:nth-child(even) {
+        flex-direction: column-reverse;
+    }
+    .Creers .discover .con .info {
+        width: 100%;
+    }
+    .Creers .discover .con .img {
+        max-width: 100%;
+        margin-left: unset;
+        margin-right: unset !important;
+    }
+}
+@media (Max-width: 480px) {
+    .Creers .contact .con .info h2 {
+        font-size: 32px;
+    }
+    .Creers .contact .con .info p {
+        font-size: 16px;
+    }
+}
+@media (Max-width: 380px) {
+
+    .Creers .main-img img {
+        width: 200%;
+    }
+
+    .Creers p {
+        font-size: 16px !important;
+    }
+    .Creers .contact .con .info {
+        padding: 8px;
+    }
+    .Creers .contact .con .info button {
+        margin: 12px 4px;
+        font-size: 16px;
+    }
+    .Creers .discover .con .info h2 {
+        padding-left: unset;
+    }
+}

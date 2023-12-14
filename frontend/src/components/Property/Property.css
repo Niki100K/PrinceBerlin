@@ -1,0 +1,437 @@
+.Property {
+    position: absolute;
+    top: 100px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Property .con {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.Property .con .property {
+    max-width: 900px;
+    width: 100%;
+}
+.Property .con .property .images {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Property .con .property .images img {
+    width: 100%;
+}
+.Property .con .property .images .main {
+    max-width: 70%;
+    width: 100%;
+}
+.Property .con .property .images .child {
+    max-width: 30%;
+    width: 100%;
+}
+.Property .con .property .price {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    overflow: hidden;
+}
+.Property .con .property .price :where(.rooms, .location) {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    margin: 16px 0 0;
+}
+.Property .con .property .price .location strong:nth-child(2) {
+    text-decoration: underline;
+    cursor: pointer;
+}
+.Property .con .property .price #icon {
+    color: var(--Light1);
+}
+.Property .con .property .price strong {
+    font-family: var(--Font2);
+    color: var(--Dark1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+.Property .con .property .price span {
+    color: var(--Light1);
+}
+.Property .con .property .all-info {
+    max-width: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    padding: 0 8px;
+}
+.Property .con .property .all-info .line {
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin: 8px 0;
+    overflow: hidden;
+}
+.Property .con .property .all-info .line .icon {
+    width: 10%;
+    font-size: 28px;
+}
+.Property .con .property .all-info .line .text {
+    width: 90%;
+}
+.Property .con .property .all-info .line .text p {
+    font-family: var(--Font4);
+    font-size: 24px;
+    color: var(--Dark1);
+    text-transform: capitalize;
+}
+.Property .con .property .all-info .line .text span {
+    font-family: var(--Font2);
+    color: var(--Middle1);
+}
+.Property .con .property .description {
+    max-width: 70%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 32px;
+    padding: 0 8px;
+}
+.Property .con .property .description .header {
+    width: 100%;
+}
+.Property .con .property .description .header h2 {
+    color: var(--Middle1);
+    font-family: var(--Font4);
+}
+.Property .con .property .description .part {
+    width: 100%;
+    margin-top: 16px;
+}
+.Property .con .property .description .part h3 {
+    font-family: var(--Font4);
+    color: var(--Dark1);
+}
+.Property .con .property .description .part p {
+    font-family: var(--Font2);
+    color: var(--Middle1);
+    margin-top: 8px;
+}
+.Property .con .card {
+    position: sticky;
+    top: 0;
+    max-width: 400px;
+    padding: 8px 16px;
+}
+.Property .con .card .contact {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Property .con .card .contact h2 {
+    font-family: var(--Font2);
+}
+.Property .con .card .contact .input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+.Property .con .card .contact .input input {
+    font-size: 20px;
+    outline: none;
+    border: 1px solid var(--Dark1);
+    border-radius: 4px;
+    padding: 8px 4px 4px;
+    color: var(--Middle1);
+}
+.Property .con .card .contact .input label {
+    position: absolute;
+    left: 8px;
+    color: var(--Middle1);
+    font-size: 20px;
+    pointer-events: none;
+}
+.Property .con .card .contact .input input:focus + label,
+.Property .con .card .contact .input input:not(:placeholder-shown) + label {
+    transform: translateY(-70%) translateX(-10%) scale(.8);
+    background: var(--White1);
+}
+.Property .con .card .contact .btn {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 16px;
+}
+.Property .con .card .contact .btn button {
+    font-size: 18px;
+    padding: 2px 8px;
+    border-radius: 4px;
+    border: 1px solid var(--Dark1);
+    cursor: pointer;
+    background: var(--Light1);
+    color: var(--White1);
+}
+.Property .con .card .contact .btn button:nth-child(2) {
+    background: var(--Dark1);
+    border: 1px solid var(--Light1);
+}
+.Property .con .card .contact .btn button:hover {
+    opacity: .8;
+}
+.Property .con .card .contact .options {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Property .con .card .contact .options .input {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 16px;
+}
+.Property .con .card .contact .options .input input {
+    font-size: 20px;
+    outline: none;
+    border: 1px solid red;
+    border-radius: 4px;
+    padding: 8px 4px 4px;
+    color: var(--Middle1);
+}
+.Property .con .card .contact .options .input label {
+    position: absolute;
+    left: 8px;
+    color: var(--Middle1);
+    font-size: 20px;
+    pointer-events: none;
+}
+.Property .con .card .contact .options .input input:focus + label,
+.Property .con .card .contact .options .input input:not(:placeholder-shown) + label {
+    transform: translateY(-70%) translateX(-10%) scale(.8);
+    background: var(--White1);
+}
+
+.Property .swipers {
+    max-width: 1400px;
+    width: 100%;
+    margin: 64px 0;
+}
+.Property .swipers .swiper-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Property .swipers .swiper-con h2 {
+    width: 100%;
+    margin: 16px;
+    font-family: var(--Font4);
+    font-size: 28px;
+}
+.Property .swipers .swiper-con .image-con {
+    text-decoration: none;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+    border-radius: 12px;
+    overflow: hidden;
+}
+.Property .swipers .swiper-con .image-con p {
+    font-size: 24px;
+    padding-left: 8px;
+    color: var(--Light1);
+}
+.Property .swipers .swiper-con .image-con .line {
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    padding: 0 8px 8px;
+    color: var(--Dark1);
+}
+.Property .swipers .swiper-con .image-con .line strong {
+    font-family: var(--Font2);
+    color: var(--Dark1);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 8px;
+}
+.Property .swipers .swiper-con .image-con .line strong span {
+    color: var(--Light1);
+}
+
+
+@media (max-width: 980px) {
+    .Property .con {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Property .con .card {
+        position: relative;
+    }
+    .Property .con .property .description,
+    .Property .con .property .all-info {
+        max-width: 100%;
+    }
+}
+@media (max-width: 680px) {
+    .Property .con .property .all-info .line .icon {
+        width: 20%;
+    }
+    .Property .con .property .all-info .line .text {
+        width: 80%;
+    }
+}
+@media (max-width: 540px) {
+    .Property .con .property .images {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Property .con .property .images .main {
+        max-width: 100%;
+    }
+    .Property .con .property .images .child {
+        max-width: 100%;
+    }
+    .Property .con .property .images .child img {
+        width: 50%;
+    }
+}
+@media (Max-width: 380px) {
+    .Property .con .property .all-info .line .icon {
+        font-size: 24px;
+    }
+    .Property .con .property .all-info .line .text p {
+        font-size: 18px;
+    }
+    .Property .con .property .all-info .line .text span {
+        font-size: 14px;
+    }
+    .Property .con .property .price strong {
+        font-size: 12px;
+    }
+    .Property .con .card {
+        width: 100%;
+    }
+    .Property .con .card .contact .input {
+        width: 100%;
+    }
+    .Property .con .card .contact .input input {
+        width: 100%;
+    }
+    .Property .con .card .contact .btn {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Property .con .card .contact .btn button {
+        width: 100%;
+        margin-top: 16px;
+    }
+}
+
+
+
+.Property .sellProperty {
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding: 0 8px;
+}
+.Property .sellProperty .text {
+    width: 65%;
+}
+.Property .sellProperty .text h2 {
+    color: var(--Dark1);
+    font-size: 28px;
+}
+.Property .sellProperty .text p {
+    color: var(--Middle1);
+    font-size: 20px;
+}
+.Property .sellProperty .text ol {
+    padding-left: 16px;
+    margin: 16px 0;
+}
+.Property .sellProperty .text ol li {
+    color: var(--Middle1);
+    margin: 4px 0;
+    font-family: var(--Font2);
+}
+.Property .sellProperty .text ol li::marker {
+    color: var(--Light1);
+    font-weight: bold;
+}
+.Property .sellProperty .text button {
+    border: none;
+    background: transparent;
+    cursor: pointer;
+    font-size: 20px;
+    padding: 4px 16px;
+    margin: 8px 4px;
+    font-family: var(--Font4);
+    border-radius: 8px;
+}
+.Property .sellProperty .text button:hover {
+    background: var(--Light1);
+    color: var(--White1);
+}
+.Property .sellProperty .img {
+    max-width: 400px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Property .sellProperty .img img {
+    width: 80%;
+}
+
+@media (max-width: 680px) {
+    .Property .sellProperty {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column-reverse;
+    }
+    .Property .sellProperty .text {
+        width: 100%;
+    }
+    .Property .sellProperty .img {
+        max-width: 100%;
+    }
+}
+@media (max-width: 380px) {
+    .Property .sellProperty .text p {
+        font-size: 16px;
+    }
+    .Property .sellProperty .text ol li {
+        font-size: 14px;
+        margin: 8px 0;
+    }
+}

@@ -1,0 +1,321 @@
+.Contact {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Contact .main {
+    width: 100%;
+    max-height: 600px;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    margin-bottom: 40px;
+}
+.Contact .main img {
+    width: 100%;
+}
+
+.Contact .header {
+    max-width: 1200px;
+    width: 100%;
+    text-align: center;
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+    margin: 0 8px;
+    padding: 24px 8px;
+}
+.Contact .header h1 {
+    position: relative;
+    font-size: 48px;
+    color: var(--Dark1);
+}
+.Contact .header h1 strong {
+    position: relative;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+.Contact .header h1 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.Contact .header h1 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.Contact .header h1 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+    transition-delay: 0.2s;
+}
+.Contact .header p {
+    font-size: 24px;
+    color: var(--Middle1);
+}
+
+.Contact .contacts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0;
+}
+.Contact .contacts .con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 80px;
+    overflow: hidden;
+    background: var(--Dark1);
+    padding: 24px 8px;
+}
+.Contact .contacts .con:nth-child(even) {
+    background: transparent;
+}
+.Contact .contacts .con .fix {
+    padding: 24px 0;
+    max-width: 1400px;
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-start;
+}
+.Contact .contacts .con:nth-child(even) .fix {
+    flex-direction: row-reverse;
+}
+.Contact .contacts .con .img {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: scale(.8);
+}
+.Contact .contacts .con .img.show {
+    transform: scale(1);
+    transition: 0.6s;
+}
+.Contact .contacts .con .img img {
+    width: 100%;
+    filter: drop-shadow(12px 24px 24px rgba(255,255,255,0.3));
+    border-radius: 24px;
+}
+.Contact .contacts .con:nth-child(even) .img img {
+    filter: drop-shadow(12px 24px 24px rgba(0,0,0,0.3));
+}
+.Contact .contacts .con .info {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    text-align: start;
+    padding: 8px;
+    z-index: 2;
+}
+.Contact .contacts .con .info h2 {
+    position: relative;
+    font-size: 38px;
+    margin-bottom: 12px;
+    color: var(--White1);
+    z-index: 1;
+    padding-left: 24px;
+}
+.Contact .contacts .con .info h2 strong {
+    position: relative;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+    z-index: -1;
+}
+.Contact .contacts .con .info h2 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.Contact .contacts .con .info h2 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.Contact .contacts .con .info h2 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+    transition-delay: 0.2s;
+}
+
+
+.Contact .contacts .con:nth-child(even) .info h2 {
+    color: var(--Dark1);
+}
+.Contact .contacts .con:nth-child(even) .info h2 strong {
+    color: var(--Dark1);
+}
+.Contact .contacts .con .info p {
+    font-size: 18px;
+    color: var(--White1);
+}
+.Contact .contacts .con:nth-child(even) .info p {
+    opacity: .8;
+    color: var(--Middle1);
+}
+.Contact .contacts .con .info button {
+    font-size: 24px;
+    margin: 48px 0;
+    padding: 4px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: 0.4s;
+    background: var(--Light1);
+    color: var(--White1);
+    border: none;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.Contact .contacts .con .info button.show {
+    transform: translate(0);
+    opacity: .9;
+    transition: 1s;
+}
+.Contact .contacts .con .info button.show:hover {
+    opacity: 1;
+}
+
+
+.Contact .faq {
+    max-width: 1200px;
+    width: 100%;
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+    margin: 0 8px 40px;
+    padding: 24px 12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Contact .faq .line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-bottom: 8px;
+}
+.Contact .faq .line :where(.question, .answer) {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Contact .faq .line .answer {
+    display: none;
+}
+.Contact .faq .line .answer.show {
+    display: flex;
+}
+.Contact .faq .line .arrow {
+    font-size: 32px;
+}
+.Contact .faq .line .arrow.rotate {
+    transform: rotate(180deg);
+}
+.Contact .faq .line h3 {
+    width: 80%;
+    cursor: pointer;
+    color: var(--Middle1);
+}
+.Contact .faq .line h3.active {
+    color: var(--Dark1);
+}
+.Contact .faq .line p {
+    margin-top: 8px;
+}
+.Contact .faq .line strong {
+    color: var(--Light1);
+}
+
+@media (MAX-width: 680px) {
+    .Contact {
+        top: 50px;
+    }
+
+    .Contact .main img {
+        width: 150%;
+    }
+
+    .Contact .header h1 {
+        font-size: 32px;
+    }
+    .Contact .contacts .con .fix {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Contact .contacts .con:nth-child(even) .fix {
+        flex-direction: column;
+    }
+    .Contact .contacts .con .info {
+        max-width: 100%;
+    }
+    .Contact .contacts .con .img {
+        max-width: 600px;
+    }
+    .Contact .contacts .con .img img {
+        border-radius: 0;
+        filter: unset;
+    }
+    .Contact .contacts .con {
+        padding: 24px 0;
+    }
+    .Contact .contacts .con .info h2 {
+        padding: 12px;
+    }
+}
+@media (Max-width: 380px) {
+
+    .Contact .main img {
+        width: 200%;
+    }
+
+    .Contact .header h1 {
+        font-size: 24px;
+    }
+
+    .Contact .contacts .con .info p,
+    .Contact .header p {
+        font-size: 16px;
+    }
+
+    .Contact .contacts .con .info button {
+        font-size: 16px;
+        padding: 4px 12px;
+    }
+}   

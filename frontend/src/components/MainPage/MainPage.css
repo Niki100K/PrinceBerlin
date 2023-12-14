@@ -1,0 +1,709 @@
+.MainPage {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    overflow: hidden;
+}
+.MainPage .main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.MainPage .main img {
+    width: 200%;
+}
+.MainPage .main .header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.MainPage .main .header h1 {
+    color: var(--White1);
+    font-size: 96px;
+    text-shadow: 4px 8px 4px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+.MainPage .main .header h1 strong {
+    position: relative;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin-right: 8px;
+}
+.MainPage .main .header h1 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.MainPage .main .header h1 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.MainPage .main .header h1 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+}
+
+
+
+
+
+
+.MainPage .offerts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 40px 0 0;
+    padding: 24px 0 0;
+}
+.MainPage .offerts .offert {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.MainPage .offerts .offert:nth-child(2) {
+    flex-direction: row-reverse;
+}
+.MainPage .offerts .offert .img {
+    max-width: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transform: scale(.8);
+}
+.MainPage .offerts .offert .img.show {
+    transform: scale(1);
+    opacity: 1;
+    transition: 1s;
+}
+.MainPage .offerts .offert .img img {
+    width: 100%;
+}
+.MainPage .offerts .offert .info {
+    max-width: 50%;
+    width: 100%;
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+.MainPage .offerts .offert .info h2 {
+    color: var(--Dark1);
+    font-size: 32px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 12px;
+}
+.MainPage .offerts .offert .info h2::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 20%;
+    height: 100%;
+    border-bottom: 5px solid var(--Light1);
+}
+.MainPage .offerts .offert .info h2::before {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    right: 0;
+    background: var(--White1);
+    z-index: 2;
+}
+.MainPage .offerts .offert .info h2.show::before {
+    width: 0;
+    transition: 0.6s;
+}
+.MainPage .offerts .offert .info ul {
+    width: 80%;
+    text-align: start;
+    color: var(--Middle1);
+    opacity: 0.8;
+}
+.MainPage .offerts .offert .info ul li {
+    position: relative;
+    display:list-item;
+    justify-content: flex-start;
+    align-items: center;
+    margin-bottom: 8px;
+    transform: translateY(100%);
+}
+.MainPage .offerts .offert .info ul li.show {
+    transform: translate(0);
+    transition: 1s;
+}
+.MainPage .offerts .offert .info ul li::after {
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: var(--White1);
+    right: 0;
+}
+.MainPage .offerts .offert .info ul li.show::after {
+    width: 0;
+    transition: 2s;
+}
+.MainPage .offerts .offert .info ul li::marker {
+    color: var(--Light1);
+}
+.MainPage .offerts .offert .info p {
+    color: var(--Light1);
+    width: 80%;
+    text-align: start;
+}
+.MainPage .offerts .offert .info h3 {
+    width: 80%;
+    text-align: start;
+    color: var(--Dark1);
+    font-size: 24px;
+    margin-bottom: 8px;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.MainPage .offerts .offert .info h3.show {
+    opacity: 1;
+    transform: translate(0);
+    transition: 1s;
+}
+.MainPage .offerts .offert .info .btn {
+    width: 80%;
+    display: flex;
+}
+.MainPage .offerts .offert .info .btn button {
+    font-size: 18px;
+    padding: 4px 24px;
+    margin: 8px 0 0;
+    border-radius: 4px;
+    background: var(--Light1);
+    border: none;
+    cursor: pointer;
+    color: var(--White1);
+    overflow: hidden;
+    transform: translateY(100%);
+    opacity: 0;
+}
+.MainPage .offerts .offert .info .btn button:hover {
+    opacity: 0.9;
+}
+.MainPage .offerts .offert .info .btn button.show {
+    transform: translate(0);
+    opacity: 1;
+    transition: 1s;
+}
+
+
+.MainPage .fun-section {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: var(--White1);
+    padding: 24px;
+    text-align: center;
+    margin: 20px 12px;
+    border-radius: 8px;
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+    margin-bottom: 100px;
+    overflow: hidden;
+}
+.MainPage .fun-section h2 {
+    font-size: 24px;
+    color: var(--Middle1);
+    margin-bottom: 20px;
+    transform: translateY(100%);
+    opacity: 0;
+} 
+.MainPage .fun-section h2.show {
+    transition: 1s;
+    opacity: 1;
+    transform: translate(0);
+}
+.MainPage .fun-section p {
+    font-size: 16px;
+    color: var(--Dark1);
+    margin-bottom: 20px;
+}
+.MainPage .fun-section ul {
+    text-align: left;
+    padding-left: 20px;
+}
+.MainPage .fun-section li {
+    font-size: 16px;
+    color: var(--Middle1);
+    margin-bottom: 10px;
+}
+.MainPage .explore-homes-link {
+    padding: 10px 20px;
+    background-color: var(--Light1);
+    opacity: 0.8;
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+.MainPage .explore-homes-link:hover {
+    opacity: 1;
+}
+.MainPage .fun-images {
+    margin-top: 20px;
+    max-width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainPage .fun-images .img {
+    max-width: 320px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    overflow: hidden;
+    border: 1px solid var(--Light1);
+    transform: translateY(100%);
+    border-radius: 4px;
+    opacity: 0;
+    transition: 1s;
+}
+.MainPage .fun-images .img.show {
+    transform: translate(0);
+    opacity: 1;
+}
+.MainPage .fun-images .img.show:nth-child(2) {
+    transition-delay: 0.2s;
+}
+.MainPage .fun-images .img.show:nth-child(3) {
+    transition-delay: 0.4s;
+}
+.MainPage .fun-images img {
+    width: 100%;
+    border-radius: 5px;
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+.MainPage .fun-images .img:hover img {
+    transform: scale(1);
+}
+
+
+
+
+
+
+.recommended-places {
+    width: 1400px;
+    margin: 0 8px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    z-index: 2;
+}
+.recommended-places .header {
+    width: 100%;
+    padding-left: 32px;
+    margin-bottom: 24px;
+    color: var(--Middle1);
+}
+.recommended-places .header h2 {
+    font-size: 32px;
+}
+.recommended-places .cards {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.recommended-places .cards .card {
+    position: relative;
+    max-width: 320px;
+    width: 100%;
+    margin: 10px;
+    border-radius: 8px;
+    overflow: hidden;
+    cursor: pointer;
+}
+.recommended-places .cards .card .img {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+}
+.recommended-places .cards .card .img img {
+    width: 100%;
+    transform: scale(1.1);
+    transition: 0.6s;
+}
+.recommended-places .cards .card:hover .img img {
+    transform: scale(1);
+}
+.recommended-places .cards .card span {
+    position: absolute;
+    top: 0;
+    right: 0;
+    margin: 8px;
+    font-size: 18px;
+    background: rgba(255, 255, 255, 0.7);
+    padding: 4px 20px;
+    border-radius: 12px;
+    color: var(--Dark1);
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+}
+.recommended-places .cards .card h3 {
+    position: absolute;
+    bottom: 0;
+    margin: 8px;
+    border-bottom: 2px solid transparent;
+    font-size: 20px;
+    color: var(--Light2);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+}
+.recommended-places .cards .card:hover h3 {
+    border-bottom: 2px solid var(--White1);
+}
+
+
+
+
+
+
+.MainPage .discover {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    margin: 0;
+    padding: 48px 0;
+}
+.MainPage .discover .header {
+    max-width: 1272px;
+    width: 100%;
+}
+.MainPage .discover .header h2 {
+    color: var(--Dark1);
+    width: 100%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 24px;
+    padding-left: 12px;
+}
+.MainPage .discover .header h2 strong {
+    position: relative;
+    margin-right: 8px;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+    z-index: 1;
+}
+.MainPage .discover .header h2 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.MainPage .discover .header h2 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.MainPage .discover .header h2 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+}
+.MainPage .discover .cards-con {
+    max-width: 1272px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.MainPage .discover .cards-con a {
+    text-decoration: none;
+}
+.MainPage .discover .card {
+    max-width: 400px;
+    width: 400px;
+    height: 250px;
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+    margin: 12px 8px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    flex-direction: column;
+    padding: 4px 8px;
+    border-radius: 8px;
+    transform: translateY(50%);
+    opacity: 0;
+}
+.MainPage .discover .card:nth-child(2) {
+    transform: translateY(100%);
+}
+.MainPage .discover .card:nth-child(3) {
+    transform: translateY(150%);
+}
+.MainPage .discover .card.show {
+    transition: 1s;
+    transform: translate(0);
+    opacity: 1;
+}
+.MainPage .discover .card .head {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.MainPage .discover .card .head h3 {
+    width: 80%;
+    font-size: 20px;
+    color: var(--Dark1);
+}
+.MainPage .discover .card .head img {
+    max-width: 48px;
+}
+.MainPage .discover .card p {
+    margin-top: 12px;
+    width: 100%;
+    color: var(--Middle1);
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width: 1100px) {
+    .MainPage .fun-images img {
+        max-width: 280px;
+    }
+}
+
+@media (MAX-width: 1000px) {
+    .MainPage .offerts .offert {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+        padding: 24px 0;
+    }
+    .MainPage .offerts .offert:nth-child(2) {
+        flex-direction: column;
+    }
+    .MainPage .offerts .offert .img {
+        max-width: 80%;
+    }
+    .MainPage .offerts .offert .info {
+        max-width: 80%;
+    }
+    .MainPage .offerts .offert .info ul {
+        width: 100%;
+    }
+
+    .MainPage .offerts .offert .info .btn button {
+        margin-bottom: 24px;
+    }
+    .MainPage .offerts .offert .info h3 {
+        width: 100%;
+    }
+}   
+
+@media (max-width: 780px) {
+
+
+    .recommended-places {
+        margin-top: 40px;
+    }
+    .recommended-places .cards {
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+    .recommended-places .cards .card {
+        max-width: unset;
+        width: 46%;
+        margin: 10px 0;
+    }
+}
+@media (max-width: 680px) {
+
+    .recommended-places .header {
+        padding-left: unset;
+        padding: 0 12px;
+    }
+    .recommended-places .header h2 {
+        font-size: 24px;
+    }
+    .MainPage .main .header h1 {
+        font-size: 48px;
+    }
+
+
+    .MainPage .fun-section {
+        margin: 20px 8px;
+        padding: 8px;
+    }
+    .MainPage .fun-images {
+        flex-wrap: wrap;
+    }
+
+
+    .property-card {
+        margin: 20px 8px;
+    }
+
+    .partnerships-and-certifications {
+        padding: 8px;
+        margin: 20px 0;
+    }
+
+
+
+    .MainPage .discover {
+        margin: 20px 0;
+    }
+    .MainPage .discover .cards-con {
+        flex-wrap: wrap;
+    }
+    .MainPage .discover .card {
+        max-width: unset;
+        height: auto;
+    }
+    .MainPage .discover .card .head {
+        justify-content: flex-end;
+        flex-direction: row-reverse;
+    }
+    .MainPage .discover .card .head h3 {
+        display: flex;
+        padding-left: 12px;
+        justify-content: flex-start;
+    }
+    .MainPage .discover .card .head img {
+        max-width: 56px;
+    }
+    .MainPage .discover .card p {
+        padding-left: 68px;
+    }
+
+    .MainPage .offerts .offert .img {
+        max-width: 100%;
+        padding: 0;
+    }
+    .MainPage .offerts .offert .info {
+        max-width: 90%;
+    }
+
+}
+
+@media (max-width: 480px) {
+
+    .MainPage .main .header h1 {
+        font-size: 38px;
+    }
+}
+@media (max-width: 380px) {
+
+    .partnership img {
+        max-width: 80px;
+        margin-right: 12px;
+    }
+
+    .MainPage .discover .card p {
+        font-size: 16px;
+    }
+
+
+    .MainPage .offerts .offert .info {
+        padding: unset;
+        padding-left: 8px;
+    }
+    .MainPage .offerts .offert .info ul {
+        width: 100%;
+    }
+}
+
+@media (max-width: 340px) {
+    .recommended-places .cards .card {
+        width: 100%;
+        margin: 10px 0;
+    }
+}
+
+
+
+
+
+
+
+.skeleton-recommended-places {
+    width: 100%;
+    height: 140px;
+    opacity: 0.7;
+    animation: skeleton-recommended-places 1s linear infinite alternate;
+}
+
+@keyframes skeleton-recommended-places {
+    0% {
+        background-color: hsl(200, 20%, 70%);
+    }
+    100% {
+        background-color: hsl(200, 20%, 95%);
+    }
+}

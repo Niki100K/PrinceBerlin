@@ -1,0 +1,459 @@
+.Sell {
+    position: absolute;
+    top: 0px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.Sell h2 {
+    font-family:'Times New Roman', Times, serif;
+}
+.Sell .main {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+    max-height: 450px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Sell .main .img {
+    width: 100%;
+}
+.Sell .main .header {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 48px;
+}
+.Sell .main .header h1 {
+    color: var(--White1);
+    font-size: 60px;
+    text-shadow: 4px 8px 4px rgba(0, 0, 0, 0.4);
+    z-index: 2;
+}
+.Sell .main .header h1 strong {
+    position: relative;
+    color: var(--White1);
+    text-shadow: 2px 4px 2px rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    margin-right: 8px;
+}
+.Sell .main .header h1 strong .marker {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transform: translateX(-10%) rotate(-2deg) skew(-20deg);
+    z-index: -1;
+}
+.Sell .main .header h1 strong .marker::after {
+    position: absolute;
+    content: "";
+    left: 0;
+    width: 0%;
+    height: 80%;
+    background: var(--Light1);
+    border-radius: 8px;
+}
+.Sell .main .header h1 strong .marker.show::after {
+    width: 100%;
+    transition: 0.6s;
+}
+
+
+
+
+
+.Sell .sell-info-con {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 100px;
+    padding: 0 8px;
+}
+.Sell .sell-info-con .con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Sell .sell-info-con .con .info h2 {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.Sell .sell-info-con .con .info p {
+    font-size: 16px;
+    margin-bottom: 24px;
+}
+.Sell .sell-info-con .con .img {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Sell .sell-info-con .con .img img {
+    width: 400px;
+}
+.Sell .sell-info-con .mobile-con-p {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Sell .sell-info-con .mobile-con-p p {
+    display: none;
+    margin-bottom: 24px;
+}
+
+
+
+.Sell .traditionally-con {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 300px;
+    padding: 0 8px;
+}
+.Sell .traditionally-con .con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Sell .traditionally-con .con .info h2 {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.Sell .traditionally-con .con .info button {
+    font-size: 24px;
+    margin: 24px 0;
+    padding: 4px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--Light1);
+    color: var(--White1);
+    border: none;
+    text-transform: capitalize;
+}
+.Sell .traditionally-con .con .info button:hover {
+    opacity: .9;
+}
+.Sell .traditionally-con .con .img {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Sell .traditionally-con .con .img img {
+    width: 400px;
+}
+
+
+
+
+.Sell .traditionally-con .why-and-how {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.Sell .traditionally-con .why-and-how h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+.Sell .traditionally-con .why-and-how .why {
+    max-width: 320px;
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 24px;
+}
+.Sell .traditionally-con .why-and-how .why p {
+    margin-bottom: 8px;
+}
+.Sell .traditionally-con .why-and-how .why p #check {
+    font-size: 24px;
+    color: var(--Light1);
+}
+.Sell .traditionally-con .why-and-how .how {
+    max-width: 320px;
+}
+
+
+
+.Sell .sell-yourself-con {
+    width: 1200px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    padding: 0 8px;
+    margin-top: 300px;
+}
+.Sell .sell-yourself-con .con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+}
+.Sell .sell-yourself-con .con .info h2 {
+    font-size: 48px;
+    margin-bottom: 24px;
+}
+.Sell .sell-yourself-con .con .info button {
+    font-size: 24px;
+    margin: 24px 0;
+    padding: 4px 20px;
+    border-radius: 4px;
+    cursor: pointer;
+    background: var(--Light1);
+    color: var(--White1);
+    border: none;
+    text-transform: capitalize;
+}
+.Sell .sell-yourself-con .con .info button:hover {
+    opacity: .9;
+
+}
+.Sell .sell-yourself-con .con .img {
+    max-width: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.Sell .sell-yourself-con .con .img img {
+    width: 400px;
+}
+
+
+.Sell .sell-yourself-con .FSBO-and-how {
+    width: 70%;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+.Sell .sell-yourself-con .FSBO-and-how h3 {
+    font-size: 20px;
+    margin-bottom: 24px;
+}
+.Sell .sell-yourself-con .FSBO-and-how .FSBO {
+    max-width: 320px;
+    min-width: 220px;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-right: 24px;
+}
+.Sell .sell-yourself-con .FSBO-and-how .FSBO p {
+    margin-bottom: 8px;
+}
+.Sell .sell-yourself-con .FSBO-and-how .FSBO p #check {
+    font-size: 24px;
+    color: var(--Light1);
+}
+.Sell .sell-yourself-con .FSBO-and-how .how {
+    max-width: 360px;
+}
+
+
+
+
+.Sell .faq {
+    max-width: 800px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin: 300px 0 100px;
+}
+.Sell .faq .header {
+    width: 100%;
+    text-align: center;
+    margin-bottom: 48px;
+}
+.Sell .faq .header h2 {
+    font-size: 24px;
+    font-family: unset;
+}
+.Sell .faq .lines-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.Sell .faq .lines-con .line {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    overflow: hidden;
+    border-bottom: 1px solid grey;
+    padding: 0 4px;
+}
+.Sell .faq .lines-con .line input {
+    display: none;
+} 
+.Sell .faq .lines-con .line label {
+    width: 100%;
+}
+.Sell .faq .lines-con .line .question {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+}
+.Sell .faq .lines-con .line .question h3 {
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+.Sell .faq .lines-con .line .question #arrow {
+    font-size: 32px;
+}
+.Sell .faq .lines-con .line .answer {
+    width: 100%;
+    margin:  24px 0 12px;
+}
+.Sell .faq .lines-con .line .answer.vidible {
+    display: flex;
+}
+.Sell .faq .lines-con .line .answer.hidden {
+    display: none;
+}
+.Sell .faq .lines-con .line .answer h6 {
+    margin-bottom: 24px;
+    font-weight: 100;
+    font-size: 18px;
+    color: var(--Dark1);
+}
+.Sell .faq .lines-con .line .answer h4 {
+    margin-bottom: 8px;
+    font-size: 18px;
+    color: var(--Dark1);
+}
+.Sell .faq .lines-con .line .answer p {
+    margin-bottom: 8px;
+    color: var(--Middle1);
+}
+
+
+
+
+
+@media (Max-width: 980px) {
+    .Sell .sell-info-con .con .info h2,
+    .Sell .traditionally-con .con .info h2,
+    .Sell .sell-yourself-con .con .info h2 {
+        font-size: 36px;
+    }
+    .Sell .sell-info-con .con .img img,
+    .Sell .traditionally-con .con .img img,
+    .Sell .sell-yourself-con .con .img img {
+        width: 100%;
+    }
+}
+@media (Max-width: 880px) {
+    .Sell .traditionally-con .why-and-how,
+    .Sell .sell-yourself-con .FSBO-and-how {
+        width: 100%;
+        justify-content: space-evenly;
+    }
+}
+@media (max-width: 680px) {
+    .Sell .main .header h1 {
+        font-size: 48px;
+    }
+    .Sell .sell-info-con .con .info p:nth-child(3) {
+        display: none;
+    }
+    .Sell .sell-info-con .mobile-con-p p:nth-child(2) {
+        display: flex;
+    }
+
+
+    .Sell .traditionally-con,
+    .Sell .sell-yourself-con,
+    .Sell .faq {
+        margin-top: 100px;
+    }
+
+    .Sell button {
+        font-size: 20px !important;
+    }
+}
+@media (max-width: 580px) {
+    .Sell .sell-info-con .con .info p:nth-child(2) {
+        display: none;
+    }
+    .Sell .sell-info-con .mobile-con-p p:nth-child(1) {
+        display: flex;
+    }
+    .Sell .sell-info-con .con .img {
+        max-width: 300px;
+    }
+    .Sell .sell-info-con .con .info h2 {
+        min-width: 240px;
+    }
+}   
+@media (max-width: 480px) {
+    .Sell .main .header {
+        padding: 0 12px;
+    }
+    .Sell .main .header h1 {
+        font-size: 32px;
+    }
+    .Sell .sell-info-con .con,
+    .Sell .traditionally-con .con,
+    .Sell .sell-yourself-con .con {
+        align-items: center;
+        flex-direction: column-reverse;
+        text-align: center;
+    }
+    .Sell .sell-info-con .con .info h2 {
+        min-width: unset;
+    }
+}
+@media (MAX-width: 440px) {
+    .Sell .traditionally-con .why-and-how,
+    .Sell .sell-yourself-con .FSBO-and-how {
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .Sell .traditionally-con .why-and-how .why,
+    .Sell .sell-yourself-con .FSBO-and-how .FSBO {
+        max-width: unset;
+        min-width: unset;
+        margin-right: unset;
+        margin-bottom: 24px;
+    }
+    .Sell .traditionally-con .why-and-how .how,
+    .Sell .sell-yourself-con .FSBO-and-how .how {
+        max-width: unset;
+    }
+
+    .Sell button {
+        font-size: 16px !important;
+    }
+}

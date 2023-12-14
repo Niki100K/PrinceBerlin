@@ -1,0 +1,207 @@
+.SellingSections {
+    position: absolute;
+    width: 100%;
+    top: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+.SellingSections .con {
+    max-width: 1000px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SellingSections .con .header {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+    padding: 0 8px;
+}
+.SellingSections .con .header h2 {
+    font-size: 36px;
+    margin-bottom: 24px;
+    color: var(--Dark1);
+}
+.SellingSections .con .header p {
+    font-size: 20px;
+    width: 80%;
+    color: var(--Middle1);
+}
+
+.SellingSections .con .main-image {
+    width: 100%;
+    margin: 48px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 8px;
+}
+.SellingSections .con .main-image img {
+    width: 100%;
+    border-radius: 24px;
+}
+.SellingSections .con .information {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+}
+.SellingSections .con .information .text {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SellingSections .con .information .text .main-info p {
+    margin-bottom: 24px;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size: 18px;
+}
+
+.SellingSections .con .information .text .parts {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 24px;
+}
+.SellingSections .con .information .text .parts h2 {
+    width: 100%;
+    margin-bottom: 24px;
+}
+.SellingSections .con .information .text .parts p {
+    margin-bottom: 24px;
+    width: 100%;
+}
+.SellingSections .con .information .text .parts .img {
+    width: 100%;
+}
+.SellingSections .con .information .text .parts .img img {
+    width: 100%;
+    border-radius: 24px;
+}
+.SellingSections .con .information .text .parts .costs {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-direction: column;
+    margin-top: 24px;
+}
+.SellingSections .con .information .text .parts .costs h3 {
+    color: var(--Dark1);
+}
+.SellingSections .con .information .text .parts .costs ul {
+    padding-left: 32px;
+    color: var(--Middle1);
+}
+.SellingSections .con .information .text .parts .costs ul li::marker {
+    color: var(--Light1);
+}
+.SellingSections .con .information .text .parts .costs .ul-img {
+    width: 100%;
+    margin-top: 12px;
+}
+.SellingSections .con .information .text .parts .costs .ul-img img {
+    width: 100%;
+    border-radius: 24px;
+}
+
+.SellingSections .con .information .text .parts .description {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SellingSections .con .information .text .parts .description h2 {
+    margin-bottom: unset;
+}
+.SellingSections .con .information .text .parts .description .earch-p-con {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+.SellingSections .con .information .text .parts .description .earch-p-con p {
+    color: var(--Middle1);
+}
+.SellingSections .con .information .text .parts .description .earch-p-con p strong {
+    color: var(--Light1);
+}
+.SellingSections .con .information .text .parts .description .earch-p-con img {
+    width: 100%;
+    border-radius: 24px;
+    margin-bottom: 24px;
+}
+
+
+
+.SellingSections .con .information .sticky-box {
+    position: sticky;
+    top: 0;
+    width: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 16px;
+}
+.SellingSections .con .information .sticky-box .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 8px;
+    border-radius: 24px;
+    text-align: center;
+    color: var(--Dark1);
+    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
+}
+.SellingSections .con .information .sticky-box .box button {
+    margin-top: 48px;
+    padding: 4px 20px;
+    font-size: 20px;
+    background: var(--Light1);
+    border: none;
+    border-radius: 8px;
+    color: var(--White1);
+    cursor: pointer;
+}
+.SellingSections .con .information .sticky-box .box button:hover {
+    opacity: .9;
+}
+
+
+@media (max-width: 680px) {
+    .SellingSections .con img {
+        border-radius: 12px !important;
+    }
+    .SellingSections .con .header p {
+        width: 100%;
+    }
+    .SellingSections .con .information .sticky-box {
+        display: none;
+    }
+    .SellingSections .con .information .text {
+        width: 100%;
+        padding: 0 8px;
+    }
+}
+@media (max-width: 380px) {
+    .SellingSections .con .header p {
+        font-size: 16px;
+    }
+    .SellingSections {
+        top: 60px;
+    }
+}
