@@ -10,7 +10,7 @@ export const ActiveProvider = ({ children }) => {
   
   
   
-  const API = 'http://localhost:3004'
+  const API = 'https://prince-berlin-e561739db9a2.herokuapp.com'
   const API_links = {
     PropertiesData: `${API}/allhomes`,
     Property17: `${API}/property/17`,
