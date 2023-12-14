@@ -21,7 +21,6 @@ const Property = () => {
     useEffect(() => {
         const data = homesData.find(property => property.id === propertyId)
         setPropertyData(data || {})
-        console.log(data);
     }, [setPropertyData, homesData, propertyId])
 
     useEffect(() => {
