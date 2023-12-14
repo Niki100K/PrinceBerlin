@@ -10,7 +10,7 @@ const fs = require('fs');
 require('dotenv').config()
 
 const corsOptions = {
-    origin: 'https://marvelous-cannoli-1574d5.netlify.app',
+    origin: ['https://marvelous-cannoli-1574d5.netlify.app', 'http://localhost:3000'],
     optionsSuccessStatus: 200,
 };
 
