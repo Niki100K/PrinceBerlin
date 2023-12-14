@@ -192,12 +192,12 @@ app.get('/all-property-images', (req, res) => {
         }
     )
 })
-app.delete('/del-data', (req, res) => {
-    const { pass, id } = req.body
+app.delete('/delete', (req, res) => {
+    const { id, password } = req.body
 
     db.query(
         "DELETE FROM propertyManage WHERE propertyId = ? AND password = ?",
-        [id, pass],
+        [id, password],
         (err, result) => {
             if (err) {
                 console.log(err);

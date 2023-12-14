@@ -134,7 +134,7 @@
 .Property .con .card {
     position: sticky;
     top: 0;
-    max-width: 400px;
+    max-width: 300px;
     padding: 8px 16px;
 }
 .Property .con .card .contact {
@@ -202,34 +202,47 @@
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    margin: 16px 0;
 }
-.Property .con .card .contact .options .input {
+.Property .con .card .contact .options .inputs {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.Property .con .card .contact .options .inputs .inputOption {
     position: relative;
+    width: 45%;
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 16px;
 }
-.Property .con .card .contact .options .input input {
-    font-size: 20px;
-    outline: none;
-    border: 1px solid red;
+.Property .con .card .contact .options .inputs .inputOption input {
+    width: 100%;
+    font-size: 18px;
     border-radius: 4px;
-    padding: 8px 4px 4px;
-    color: var(--Middle1);
+    outline: none;
+    padding: 4px;
+    border: 1px solid var(--Dark1);
+    text-align: center;
 }
-.Property .con .card .contact .options .input label {
-    position: absolute;
-    left: 8px;
-    color: var(--Middle1);
-    font-size: 20px;
-    pointer-events: none;
+.Property .con .card .contact .options button {
+    margin: 8px 0;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 4px;
+    font-size: 16px;
+    background: red;
+    border: none;
+    cursor: pointer;
+    color: var(--White1);
 }
-.Property .con .card .contact .options .input input:focus + label,
-.Property .con .card .contact .options .input input:not(:placeholder-shown) + label {
-    transform: translateY(-70%) translateX(-10%) scale(.8);
-    background: var(--White1);
+.Property .con .card .contact .options button:hover {
+    opacity: .8;
 }
+
 
 .Property .swipers {
     max-width: 1400px;

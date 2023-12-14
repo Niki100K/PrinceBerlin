@@ -7,6 +7,7 @@ import { FaCalculator, FaDoorOpen } from "react-icons/fa6";
 import { PiStepsFill } from "react-icons/pi";
 import { BsFillTagsFill } from "react-icons/bs";
 import { SlSizeFullscreen } from "react-icons/sl";
+import axios from 'axios'
 const Property = () => {
     const {id} = useParams()
     const propertyId = parseInt(id, 10)
@@ -110,6 +111,42 @@ const Property = () => {
         navigate('/add-property')
     }
 
+    const [deleteFormData, setDeleteFormData] = useState({
+        propertyId: '',
+        propertyPassword: '',
+    })
+
+    const handleChangeData = (field, e, maxSymbols) => {
+        let value = e.target.value
+
+        if (field === 'propertyPassword') {
+            value = value.replace(/\D/g, '')
+        }
+
+        setDeleteFormData(prev => ({
+            ...prev,
+            [field]: value.length > maxSymbols ? value.slice(0, maxSymbols) : value
+        }))
+    }
+
+    const deleteData = async () => {
+        if (deleteFormData.propertyPassword === 5 && deleteFormData.propertyId > 1) {
+            try {
+                const response = await axios.delete(`${API}/delete`, {
+                    data: {
+                        id: deleteFormData.propertyId,
+                        password: deleteFormData.propertyPassword
+                    }
+                })
+                if (response.status === 200) {
+                    navigate('/')
+                }
+            } catch (error) {
+                
+            }
+        }
+    }
+
   return {
     propertyData,
     propertyId,
@@ -120,6 +157,9 @@ const Property = () => {
     setOpenOptions,
     openOptions,
     swiperView,
+    deleteFormData,
+    handleChangeData,
+    deleteData,
   }
 }
 

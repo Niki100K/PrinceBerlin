@@ -2,7 +2,6 @@ import React, { useContext, useEffect } from 'react'
 import { Link } from 'react-router-dom'
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay, Pagination } from 'swiper/modules';
-
 import './Property.css'
 import 'swiper/css';
 import 'swiper/css/pagination';
@@ -31,11 +30,15 @@ const Property = () => {
         setOpenOptions,
         openOptions,
         swiperView,
+        deleteFormData,
+        handleChangeData,
+        deleteData,
     } = PropertyJS()
 
     useEffect(() => {
         window.scrollTo(0, 0)
     }, [])
+
 
   return (
     <div className='Property'>
@@ -129,14 +132,29 @@ const Property = () => {
                     </div>
                     {openOptions &&
                     <div className='options'>
-                        <div className='input'>
-                            <input id='propertyId' type="text" placeholder=''/>
-                            <label htmlFor="propertyId">Property Id</label>
+                        <div className='inputs'>
+                            <div className='inputOption'>
+                                <input 
+                                    id='propertyId'
+                                    type="text"
+                                    value={deleteFormData.propertyId}
+                                    onChange={(e) => handleChangeData('propertyId', e, 5)}
+                                    placeholder='Id' 
+                                />
+                                <label htmlFor="propertyId"></label>
+                            </div>
+                            <div className='inputOption'>
+                                <input 
+                                    id='propertyPassword'
+                                    type="text" 
+                                    value={(deleteFormData.propertyPassword)}
+                                    onChange={(e) => handleChangeData('propertyPassword', e, 5)}
+                                    placeholder='Password'
+                                />
+                                <label htmlFor="propertyPassword"></label>
+                            </div>
                         </div>
-                        <div className='input'>
-                            <input id='propertyPassword' type="text" placeholder=''/>
-                            <label htmlFor="propertyPassword">Property Password</label>
-                        </div>
+                        <button onClick={deleteData}>Delete</button>
                     </div>
                     }
                 </div>
