@@ -126,7 +126,6 @@ const Property = () => {
                     <div className='btn'>
                         <button>Contact</button>
                         <button onClick={() => setOpenOptions(!openOptions)}>Remove</button>
-                        <button>{window.innerWidth}</button>
                     </div>
                     {openOptions &&
                     <div className='options'>

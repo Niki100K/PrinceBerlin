@@ -90,7 +90,7 @@ const Property = () => {
             setImagesSlice(3)
             setSwiperView(3)
         }
-        if (window.innerWidth <= 380) {
+        if (window.innerWidth < 400) {
             setSwiperView(1)
         }
     }, [])

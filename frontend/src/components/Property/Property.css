@@ -322,6 +322,25 @@
         width: 50%;
     }
 }
+@media (max-width: 400px) {
+    .Property .con .card {
+        width: 100%;
+    }
+    .Property .con .card .contact .input {
+        width: 95%;
+    }
+    .Property .con .card .contact .input input {
+        width: 100%;
+    }
+    .Property .con .card .contact .btn {
+        justify-content: center;
+        flex-direction: column;
+    }
+    .Property .con .card .contact .btn button {
+        width: 100%;
+        margin-top: 16px;
+    }
+}
 @media (Max-width: 380px) {
     .Property .con .property .all-info .line .icon {
         font-size: 24px;
@@ -334,23 +353,6 @@
     }
     .Property .con .property .price strong {
         font-size: 12px;
-    }
-    .Property .con .card {
-        width: 100%;
-    }
-    .Property .con .card .contact .input {
-        width: 100%;
-    }
-    .Property .con .card .contact .input input {
-        width: 100%;
-    }
-    .Property .con .card .contact .btn {
-        justify-content: center;
-        flex-direction: column;
-    }
-    .Property .con .card .contact .btn button {
-        width: 100%;
-        margin-top: 16px;
     }
 }
 
