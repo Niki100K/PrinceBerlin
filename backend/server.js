@@ -203,7 +203,6 @@ app.delete('/delete', (req, res) => {
                 console.log(err);
                 res.status(500).json(err)
             } else {
-                res.status(200).json(result)
                 if (result.affectedRows === 1) {
                     db.query(
                         "DELETE FROM propertyData WHERE id = ?",
@@ -220,12 +219,16 @@ app.delete('/delete', (req, res) => {
                                         if (err) {
                                             console.log(err);
                                             res.status(500).json(err)
+                                        } else {
+                                            res.status(200).json()
                                         }
                                     }
                                 )
                             }
                         }
                     )
+                } else {
+                    res.status(203).json()
                 }
             }
         }

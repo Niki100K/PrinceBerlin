@@ -33,6 +33,7 @@ const Property = () => {
         deleteFormData,
         handleChangeData,
         deleteData,
+        wrongData,
     } = PropertyJS()
 
     useEffect(() => {
@@ -141,7 +142,7 @@ const Property = () => {
                                     onChange={(e) => handleChangeData('propertyId', e, 5)}
                                     placeholder='Id' 
                                 />
-                                <label htmlFor="propertyId"></label>
+                                <label htmlFor="propertyId">{wrongData && 'Wrong Id'}</label>
                             </div>
                             <div className='inputOption'>
                                 <input 
@@ -151,7 +152,7 @@ const Property = () => {
                                     onChange={(e) => handleChangeData('propertyPassword', e, 5)}
                                     placeholder='Password'
                                 />
-                                <label htmlFor="propertyPassword"></label>
+                                <label htmlFor="propertyPassword">{wrongData && 'Password'}</label>
                             </div>
                         </div>
                         <button onClick={deleteData}>Delete</button>

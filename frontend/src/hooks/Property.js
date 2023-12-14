@@ -129,8 +129,9 @@ const Property = () => {
         }))
     }
 
+    const [wrongData, setWrongData] = useState(false)
     const deleteData = async () => {
-        if (deleteFormData.propertyPassword === 5 && deleteFormData.propertyId > 1) {
+        if (deleteFormData.propertyPassword.length === 5 && deleteFormData.propertyId.length > 1) {
             try {
                 const response = await axios.delete(`${API}/delete`, {
                     data: {
@@ -140,6 +141,8 @@ const Property = () => {
                 })
                 if (response.status === 200) {
                     navigate('/')
+                } else if (response.status === 203) {
+                    setWrongData(true)
                 }
             } catch (error) {
                 
@@ -160,6 +163,7 @@ const Property = () => {
     deleteFormData,
     handleChangeData,
     deleteData,
+    wrongData,
   }
 }
 
