@@ -28,6 +28,7 @@
     font-size: 36px;
     margin-bottom: 24px;
     color: var(--Dark1);
+    font-family: var(--Font4);
 }
 .SellingSections .con .header p {
     font-size: 20px;
@@ -62,7 +63,7 @@
 }
 .SellingSections .con .information .text .main-info p {
     margin-bottom: 24px;
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: var(--Font2);
     font-size: 18px;
 }
 
@@ -77,6 +78,7 @@
 .SellingSections .con .information .text .parts h2 {
     width: 100%;
     margin-bottom: 24px;
+    font-family: var(--Font4);
 }
 .SellingSections .con .information .text .parts p {
     margin-bottom: 24px;
@@ -106,6 +108,7 @@
 }
 .SellingSections .con .information .text .parts .costs ul li::marker {
     color: var(--Light1);
+    font-family: var(--Font2);
 }
 .SellingSections .con .information .text .parts .costs .ul-img {
     width: 100%;
@@ -135,9 +138,11 @@
 }
 .SellingSections .con .information .text .parts .description .earch-p-con p {
     color: var(--Middle1);
+    font-family: var(--Font2);
 }
 .SellingSections .con .information .text .parts .description .earch-p-con p strong {
     color: var(--Light1);
+    font-family: var(--Font4);
 }
 .SellingSections .con .information .text .parts .description .earch-p-con img {
     width: 100%;
@@ -197,11 +202,16 @@
         padding: 0 8px;
     }
 }
+@media (max-width: 580px) {
+    .SellingSections .con .header h2 {
+        font-size: 24px;
+    }
+}
 @media (max-width: 380px) {
     .SellingSections .con .header p {
         font-size: 16px;
     }
     .SellingSections {
-        top: 60px;
+        top: 100px;
     }
 }

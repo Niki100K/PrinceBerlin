@@ -25,6 +25,7 @@
 .Selling .header p {
     font-size: 20px;
     color: var(--Middle1);
+    font-family: var(--Font2);
 }
 
 .Selling .con {
@@ -50,7 +51,7 @@
     justify-content: flex-start;
     align-items: center;
     flex-direction: column;
-    box-shadow: 4px 8px 4px rgba(0, 0, 0, 0.3);
+    box-shadow: 4px 4px 8px rgba(0, 0, 0, 0.3);
     border-radius: 24px;
     padding-bottom: 24px;
     cursor: pointer;
@@ -78,10 +79,12 @@
     background: var(--Light1);
     color: var(--White1);
     padding: 2px 8px;
-    border-radius: 24px;
+    border-radius: 12px;
 }
 .Selling .con .cards .card .text p {
     color: var(--Dark1);
+    font-family: var(--Font2);
+    margin-top: 8px;
 }
 .Selling .con .title-info {
     position: sticky;
@@ -151,6 +154,20 @@
     }
     .Selling .header p {
         font-size: 16px;
+    }
+}
+@media (max-width: 580px) {
+    .Selling .header strong {
+        font-size: 24px;
+    }
+    .Selling .header h2 {
+        font-size: 20px;
+    }
+    .Selling .con .cards .card {
+        border-radius: 12px;
+    }
+    .Selling .con .cards .card img {
+        border-radius: 12px;
     }
 }
 @media (Max-width: 380px) {
