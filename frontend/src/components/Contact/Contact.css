@@ -7,6 +7,12 @@
     align-items: center;
     flex-wrap: wrap;
 }
+.Contact h2 {
+    font-family: var(--Font4);
+}
+.Contact p {
+    font-family: var(--Font2);
+}
 .Contact .main {
     width: 100%;
     max-height: 600px;
@@ -213,7 +219,6 @@
 .Contact .faq {
     max-width: 1200px;
     width: 100%;
-    box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
     margin: 0 8px 40px;
     padding: 24px 12px;
     display: flex;
@@ -251,12 +256,15 @@
     width: 80%;
     cursor: pointer;
     color: var(--Middle1);
+    font-family: var(--Font3);
 }
 .Contact .faq .line h3.active {
     color: var(--Dark1);
 }
 .Contact .faq .line p {
     margin-top: 8px;
+    font-size: 14px;
+    color: var(--Middle1);
 }
 .Contact .faq .line strong {
     color: var(--Light1);
@@ -266,13 +274,22 @@
     .Contact {
         top: 50px;
     }
+    .Contact h2 {
+        font-size: 24px !important;
+        margin-bottom: unset !important;
+        padding: unset !important;
+        padding-left: 8px !important;
+    }
 
     .Contact .main img {
         width: 150%;
     }
 
     .Contact .header h1 {
-        font-size: 32px;
+        font-size: 24px;
+    }
+    .Contact .header p {
+        font-size: 18px;
     }
     .Contact .contacts .con .fix {
         justify-content: center;
@@ -294,9 +311,13 @@
     }
     .Contact .contacts .con {
         padding: 24px 0;
+        margin-bottom: unset;
     }
     .Contact .contacts .con .info h2 {
         padding: 12px;
+    }
+    .Contact .faq {
+        padding: 24px 0;
     }
 }
 @media (Max-width: 380px) {
@@ -308,7 +329,9 @@
     .Contact .header h1 {
         font-size: 24px;
     }
-
+    .Contact h2 {
+        font-size: 20px !important;
+    }
     .Contact .contacts .con .info p,
     .Contact .header p {
         font-size: 16px;
