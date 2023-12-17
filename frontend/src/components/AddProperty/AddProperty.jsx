@@ -142,7 +142,7 @@ const AddProperty = () => {
               <Element name='KeyData'></Element>
               <div className='header'>
                 <h2>Key Data</h2>
-                <p><FaCircleInfo id='icon'/>Start with the location of the apartment and the four most important data and facts.</p>
+                <p><FaCircleInfo id='icon'/>Identify crucial information at a glance. Key data encapsulates vital details that define the essence of the subject. This includes fundamental facts such as dates, numbers, and core statistics. It serves as a quick reference point for anyone seeking a comprehensive overview.</p>
               </div>
               <div className='inputs'>
                 {inputs.slice(4, 8).map((info, index) => (
@@ -174,7 +174,7 @@ const AddProperty = () => {
               <Element name='Details'></Element>
               <div className='header'>
                 <h2>Details</h2>
-                <p><FaCircleInfo id='icon'/>Start with the location of the apartment and the four most important data and facts.</p>
+                <p><FaCircleInfo id='icon'/>Delve into the specifics and nuances that shape the subject. Details offer a deeper understanding, covering intricacies, features, and finer points that contribute to the overall context. Whether it's dimensions, specifications, or noteworthy elements, this section provides a comprehensive exploration.</p>
               </div>
               <div className='facilities'>
                 {inputs[8].buttons.map((info, index) => (
@@ -216,7 +216,7 @@ const AddProperty = () => {
               <Element name='Description'></Element>
               <div className='header'>
                 <h2>Description</h2>
-                <p><FaCircleInfo id='icon'/>Start with the location of the apartment and the four most important data and facts.</p>
+                <p><FaCircleInfo id='icon'/>Unveil the character and unique qualities through a vivid narrative. The description provides a narrative that goes beyond mere facts, offering insights into the personality or distinctive attributes. Capture the essence, atmosphere, and distinctive traits that set the subject apart.</p>
               </div>
               {inputs.slice(15, 20).map((info, index) => (
                 <div className='input' key={index}>
@@ -261,8 +261,8 @@ const AddProperty = () => {
             <div className='contact' ref={ref6}>
               <Element name='Contact'></Element>
               <div className='header'>
-                <h2>Address</h2>
-                <p><FaCircleInfo id='icon'/>Start with the location of the apartment and the four most important data and facts.</p>
+                <h2>Contact</h2>
+                <p><FaCircleInfo id='icon'/>Establish a connection point for communication and inquiries. The contact section furnishes essential information for reaching out, including contact numbers, email addresses, and any other relevant details. It serves as a gateway for further engagement, ensuring accessibility and facilitating seamless interaction.</p>
               </div>
               <div className='inputs'>
                 {inputs.slice(20, 24).map((info, index) => (
