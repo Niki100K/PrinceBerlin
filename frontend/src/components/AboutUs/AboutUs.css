@@ -78,14 +78,13 @@
   align-items: center;
   flex-direction: column;
   overflow: hidden;
-  box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
-  padding: 24px 0;
+  padding: 24px 8px;
 }
 .About .about-con h2 {
   opacity: 0;
-  transform: translateY(100%);
-  font-size: 48px;
+  font-size: 32px;
   color: var(--Dark1);
+  font-family: var(--Font3);
 }
 .About .about-con h2.show {
   transform: translate(0);
@@ -95,10 +94,11 @@
 .About .about-con p {
   color: var(--Middle1);
   max-width: 1200px;
-  font-size: 24px;
+  font-size: 20px;
   margin-top: 24px;
   opacity: 0;
   transform: translateY(100%);
+  font-family: var(--Font2);
 }
 .About .about-con p.show {
   transform: translate(0);
@@ -109,7 +109,7 @@
 .About .company {
   width: 100%;
   margin: 100px 0 0;
-  padding: 8px;
+  padding: 8px 0;
   background: var(--Dark1);
   display: flex;
   justify-content: center;
@@ -167,10 +167,10 @@
 .About .company .con .mini-con .main-info h2 {
   position: relative;
   font-size: 48px;
-  margin-bottom: 24px;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-family: var(--Font3);
 }
 .About .company .con .mini-con .main-info h2::after {
   position: absolute;
@@ -198,9 +198,9 @@
   position: relative;
   margin-bottom: 24px;
   font-size: 24px;
-  display:flexbox;
   justify-content: center;
   align-items: flex-start;
+  font-family: var(--Font2);
 }
 .About .company .con .mini-con .main-info p::after {
   position: absolute;
@@ -260,6 +260,7 @@
   flex-direction: column;
   margin-left: 12px;
   color: var(--White1);
+  padding: 0 8px;
 }
 .About .company .con .mini-con .hows h2 {
   font-size: 48px;
@@ -268,6 +269,7 @@
 .About .company .con .mini-con .hows p {
   margin-bottom: 24px;
   font-size: 24px;
+  font-family: var(--Font2);
 }
 .About .company .con .mini-con .hows .lines-con {
   width: 100%;
@@ -325,7 +327,6 @@
   background: var(--White1);
 }
 .About .directors .header {
-  box-shadow: 0px 0px 5px 1px rgba(204,204,204,1);
   max-width: 1400px;
   padding: 24px 8px;
   margin-bottom: 24px;
@@ -338,6 +339,7 @@
 .About .directors .header p {
   color: var(--Middle1);
   font-size: 20px;
+  font-family: var(--Font2);
 }
 .About .directors .directors-con {
   max-width: 1200px;
@@ -405,6 +407,7 @@
 .About .esg .con .header h3 {
   font-size: 36px;
   color: var(--Middle1);
+  font-family: var(--Font3);
 }
 .About .esg .con .header h3 span {
   color: var(--Light1);
@@ -417,10 +420,13 @@
   font-size: 20px;
   margin-bottom: 24px;
   color: var(--Middle1);
+  font-family: var(--Font2);
+  margin-top: 8px;
 }
 .About .esg .con .info ul li {
   color: var(--Middle1);
   margin-bottom: 12px;
+  font-family: var(--Font2);
 }
 .About .esg .con .info ul li::marker {
   color: var(--Light1);
@@ -490,13 +496,43 @@
 }
 @media (MAx-width: 680px) {
   .About .about-con {
-    margin: 20px 8px 0;
+    margin: 20px 0 0;
   }
-
+  .About h2 {
+    font-size: 24px !important;
+  }
   .About .about-con p {
+    font-size: 18px;
+    margin-top: 8px;
+  }
+  .About .company {
+    margin-top: 20px;
+  }
+  .About .company .con .mini-con .main-info {
+    max-width: unset;
+    width: 100%;
     padding: 0 8px;
   }
-}
+  .About .company .con .mini-con .main-info h2 {
+    font-size: 24px;
+  }
+  .About .company .con .mini-con .main-info h3 {
+    font-size: 20px;
+  }
+  .About .company .con .mini-con .main-info button {
+    margin-top: 8px;
+    font-size: 18px;
+  }
+  .About .company .con .mini-con {
+    padding: unset;
+  }
+  .About .company .con .mini-con .hows h2 {
+    margin-bottom: unset;
+  }
+  .About .company .con .mini-con .hows p {
+    font-size: 18px;
+  }
+} 
 @media (Max-width: 560px) {
 
   .About .video-con .header h1 {
@@ -507,18 +543,8 @@
   .About .video-con .header h1 strong {
     font-size: 36px;
   }
-
-  .About .about-con h2 {
-    font-size: 32px;
-  }
-  .About .company .con .mini-con .main-info h2 {
-    font-size: 32px;
-  }
   .About .company .con .mini-con .hows h2 {
     font-size: 32px;
-  }
-  .About .company .con .mini-con {
-    padding: unset;
   }
   .About .company .con .mini-con .hows {
     margin-left: unset;
@@ -548,24 +574,39 @@
   .About .esg .con .info ul {
     padding: 0 16px;
   }
+  .About .company .con .mini-con .main-info button {
+    font-size: 14px;
+  }
 } 
-@media (max-width: 380px) {
+@media (max-width: 480px) {
+  .About h2 {
+    font-size: 20px !important;
+  }
+  .About .company .con .mini-con .main-info h3 {
+    font-size: 18px;
+  }
+   .About p {
+    font-size: 16px !important;
+  }
+  .About .directors .header {
+    padding: 24px 0;
+  }
   .About .directors .header h2 {
-    text-align: center;
+    margin-bottom: unset;
   }
-  .About .company .con .mini-con .main-info h2 {
-    width: 100%;
-    text-align: center;
+  .About .esg .con .header h3 {
+    font-size: 20px;
   }
+}
+@media (max-width: 380px) {
   .About P {
     font-size: 16px !important;
-    padding: 0 8px !important;
   }
   .About .directors .directors-con .director .info p {
     font-size: 12px !important;
     padding: unset !important;
   }
   .About .company .con .mini-con .main-info h3 {
-    padding: 0 8px;
+    font-size: 18px !important;
   }
 }
