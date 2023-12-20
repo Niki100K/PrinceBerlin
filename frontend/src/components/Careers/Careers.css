@@ -168,7 +168,7 @@
 }
 .Creers .contact .con .info h2 {
     color: var(--White1);
-    font-size: 38px;
+    font-size: 32px;
     margin-bottom: 12px;
     width: 100%;
 }
@@ -206,7 +206,7 @@
 
 
 .Creers .contact .con .info p {
-    font-size: 24px;
+    font-size: 20px;
     color: var(--White1);
     opacity: 0.8;
 }

@@ -74,6 +74,7 @@
 
 
 .MainPage .offerts {
+    max-width: 1400px;
     width: 100%;
     display: flex;
     justify-content: center;
@@ -160,6 +161,7 @@
     align-items: center;
     margin-bottom: 8px;
     transform: translateY(100%);
+    font-family: var(--Font2);
 }
 .MainPage .offerts .offert .info ul li.show {
     transform: translate(0);
@@ -676,6 +678,9 @@
     }
     .MainPage .offerts .offert .info ul {
         width: 100%;
+    }
+    .MainPage .offerts .offert .info ul li {
+        font-size: 14px;
     }
 }
 

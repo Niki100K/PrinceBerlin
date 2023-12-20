@@ -59,7 +59,7 @@ const Property = () => {
                     <h2>${propertyData.purchasePrice?.toLocaleString()}</h2>
                     <div className='location'>
                         <strong><FaLocationArrow id='icon'/>{propertyData.location}</strong>
-                        <strong><GiStreetLight id='icon'/>{propertyData.street}</strong>
+                        <a href={`https://www.google.com/maps/place/${propertyData.street}`} target='__black'><GiStreetLight id='icon'/>{propertyData.street}</a>
                         <strong><MdNumbers id='icon'/>{propertyData.streetNo}</strong>
                         <strong><FaCodeBranch id='icon'/>{propertyData.zipCode}</strong>
                     </div>
